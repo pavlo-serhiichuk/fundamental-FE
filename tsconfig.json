@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // doesn't let values without type
+    "noImplicitAny": true,
+    "module": "ESNext",
+    // in which version in should be compiled
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    // let "require("...") use as import ... from ...
+    "esModuleInterop": true,
+//    allow imports without "import * as package from ..."
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
