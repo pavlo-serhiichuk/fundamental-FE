@@ -6,7 +6,7 @@
     "module": "ESNext",
     // in which version in should be compiled
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     // let "require("...") use as import ... from ...

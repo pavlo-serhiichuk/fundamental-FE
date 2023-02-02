@@ -1,8 +1,21 @@
 import webpack from 'webpack'
 
 //для конфігурації файлів які виходять за рамки js
-export function buildLoaders (): webpack.RuleSetRule[] {
+export function buildLoaders(): webpack.RuleSetRule[] {
 
+  const cssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      // Creates `style` nodes from JS strings
+      'style-loader',
+      // Translates CSS into CommonJS
+      'css-loader',
+      // Compiles Sass to CSS
+      'sass-loader',
+    ],
+  }
+
+  //If we use ts we don't need babel-loader
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -11,5 +24,6 @@ export function buildLoaders (): webpack.RuleSetRule[] {
 
   return [
     typescriptLoader,
+    cssLoader
   ]
 }
