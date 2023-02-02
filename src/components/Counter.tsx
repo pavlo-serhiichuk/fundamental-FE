@@ -1,12 +1,14 @@
 import {useState} from 'react'
 import '../main.scss'
+import s from './Counter.module.scss'
+
 const Counter = () => {
   const [counter, setCounter] = useState(0)
 
   return (
     <div>
       <p>{counter}</p>
-      <button onClick={() => setCounter(prev => prev + 1)}>+ 1</button>
+      <button className={s.btn} onClick={() => setCounter(prev => prev + 1)}>+ 1</button>
     </div>
   );
 };

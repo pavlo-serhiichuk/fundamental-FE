@@ -15,7 +15,6 @@ export default (env: BuildEnv) => {
   const isDev = mode === 'development'
 
   const config: webpack.Configuration = buildWebpackConfig({
-
     mode,
     path: paths,
     isDev,
