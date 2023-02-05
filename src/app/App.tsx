@@ -1,11 +1,11 @@
-import {Suspense, useContext, useState} from 'react';
+import {Suspense} from 'react';
 import {Link, Route, Routes} from 'react-router-dom'
-import AboutAsync from './pages/About/AboutAsync'
-import MainAsync from './pages/Main/MainAsync'
+import {AboutAsync as About} from 'pages/About'
+import {MainAsync as Main} from 'pages/Main'
 import './styles/index.scss'
-import {Theme, ThemeContext} from './theme/ThemeContext'
-import useTheme from './theme/useTheme'
-import {classNames} from './helpers/classNames/classNames'
+import {Theme} from './providers/ThemeProvider/lib/ThemeContext'
+import {classNames} from 'shared/lib/classNames/classNames'
+import {useTheme} from './providers/ThemeProvider'
 
 const App = () => {
   const {theme, toggleTheme} = useTheme()
@@ -19,8 +19,8 @@ const App = () => {
       </div>
       <Suspense fallback={<div>LOADING...</div>}>
       <Routes>
-        <Route path="/" element={<MainAsync />}  />
-        <Route path="/about" element={<AboutAsync />}  />
+        <Route path="/" element={<Main />}  />
+        <Route path="/about" element={<About />}  />
       </Routes>
       </Suspense>
     </div>
