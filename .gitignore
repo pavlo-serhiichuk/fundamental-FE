@@ -1,9 +1,8 @@
-/node_modules/
-
+node_modules
+idea
+/build
 /.idea/fundamental_FE.iml
-/.idea/inspectionProfiles/profiles_settings.xml
 /.idea/modules.xml
-
-/build/
 /package-lock.json
+/.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml

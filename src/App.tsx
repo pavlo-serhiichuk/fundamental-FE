@@ -5,12 +5,13 @@ import MainAsync from './pages/Main/MainAsync'
 import './styles/index.scss'
 import {Theme, ThemeContext} from './theme/ThemeContext'
 import useTheme from './theme/useTheme'
+import {classNames} from './helpers/classNames/classNames'
 
 const App = () => {
   const {theme, toggleTheme} = useTheme()
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {hovered: true, }, [theme])}>
       <div style={{display: 'inline-flex'}}>
         <Link to='/'>Main</Link>
         <Link to='/about'>About</Link>
