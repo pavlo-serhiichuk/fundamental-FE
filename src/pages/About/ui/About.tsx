@@ -5,7 +5,6 @@ const About = () => {
   return (
     <div>
       <p><b>{t('About')}</b></p>
-      <p><b>{t('Not about')}</b></p>
     </div>
   );
 };

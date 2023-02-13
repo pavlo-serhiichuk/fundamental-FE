@@ -1,12 +1,16 @@
-type Mods = Record<string, string | boolean>
+import {classNames} from './classNames'
 
-export function classNames(cls: string, mods: Mods = {}, additional: string[] = []): string {
-  return [
-    cls,
-    ...additional.filter(Boolean),
-    Object.entries(mods)
-      .filter(([_, value]) => Boolean(value))
-      .map(([classNames]) => classNames)
-  ]
-    .join(' ')
-}
+describe('classNames with', () => {
+  test('first arg', () => {
+    expect(classNames('className')).toBe("className")
+  })
+
+  test('first and second args', () => {
+    expect(classNames('className', {selected: true})).toBe("className selected")
+  })
+
+  test('all args', () => {
+    expect(classNames('className', {selected: true}, ['class1', 'class2']))
+      .toBe("className class1 class2 selected")
+  })
+})

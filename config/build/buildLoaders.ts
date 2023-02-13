@@ -5,6 +5,25 @@ import {BuildOptions} from './types/config'
 //для конфігурації файлів які виходять за рамки js
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
+  const babelLoader =  {
+    test: /\.m?(js|ts|tsx)s$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          "i18next-extract",
+          {"nsSeparator": '~'},
+          {
+            locales: ['ua', 'en'],
+            keyAsDefaultValue: true
+          },
+        ]
+      }
+    }
+  }
+
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2)$/i,
     use: [
@@ -46,9 +65,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   }
 
   return [
-    typescriptLoader,
-    cssLoader,
+    fileLoader,
     svgLoader,
-    fileLoader
+    babelLoader,
+    typescriptLoader,
+    cssLoader
   ]
 }

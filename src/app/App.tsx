@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <div className={classNames('app', {hovered: true,}, [theme])}>
-      <Suspense fallback="">
+      <Suspense fallback={'loading'}>
         <Navbar />
         <div className="content-page">
           <Sidebar />
