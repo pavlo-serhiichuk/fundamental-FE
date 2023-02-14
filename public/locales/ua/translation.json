@@ -2,5 +2,8 @@
   "language": "Українська",
   "translate": "переклад",
   "Main": "Головна",
-  "Page wasn't found": "Сторінка не знайдена"
+  "Page wasn't found": "Сторінка не знайдена",
+  "Something went wrong": "Щось пішло не так",
+  "Reload page": "Перезавантажити сторінку"
+
 }
