@@ -20,7 +20,11 @@ export default {
     "/node_modules/"
   ],
   moduleDirectories: [
-    "node_modules"
+    "node_modules",
+    "src"
+  ],
+  "modulePath": [
+    `<rootDir>src`
   ],
   moduleFileExtensions: [
     "js",
