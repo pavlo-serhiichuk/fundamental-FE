@@ -6,3 +6,4 @@ idea
 /package-lock.json
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
+/storybook-static
