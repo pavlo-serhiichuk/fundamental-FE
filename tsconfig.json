@@ -23,5 +23,5 @@
       "module": "CommonJS"
     }
   },
-  "include": ["config/src/setupTests.ts"]
+  "include": ["config/src/setupTests.ts", "src"]
 }

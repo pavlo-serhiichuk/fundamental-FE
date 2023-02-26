@@ -37,6 +37,6 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
       </Suspense>
     }
 
-    return children;
+    return <div>{children}</div>;
   }
 }

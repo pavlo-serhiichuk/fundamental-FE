@@ -9,7 +9,10 @@ export const AppRouter = () => {
       <Routes>
         {Object
           .values(routeConfig)
-          .map(({path, element}) => <Route path={path} element={<div className="page-wrapper">{element}</div>} />)}
+          .map(({path, element}) =>
+            <Route path={path} element={<div className="page-wrapper">{element}</div>} />
+          )
+        }
       </Routes>
     </Suspense>
   );
