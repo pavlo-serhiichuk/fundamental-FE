@@ -5,7 +5,6 @@ import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
 import {Main} from 'pages/Main'
-import {SuspenseDecorator} from 'shared/config/storybook/SuspenseDecorator/SuspenseDecorator'
 
 export default {
   title: 'pages/Main',
