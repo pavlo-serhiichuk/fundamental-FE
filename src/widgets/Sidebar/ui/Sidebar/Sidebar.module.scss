@@ -1,13 +1,9 @@
 .Sidebar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
-  background-color: var(--inverted-bg-color);
+  background-color: var(--inverted-secondary-bg-color);
   position: relative;
   transition: width 0.3s;
-}
-
-.collapsed {
-  width: var(--sidebar-width-collapsed);
 }
 
 .switcher {
@@ -19,6 +15,34 @@
   width: 100%;
 }
 
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
 .lang {
-  margin-top: 10px;
+  margin: 0 0 10px 5px;
+}
+
+.collapsedBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items {
+  margin: 10px 0 0 26px;
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    margin-top: 5px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon {
+    fill: var(--inverted-primary-color);
+  }
 }

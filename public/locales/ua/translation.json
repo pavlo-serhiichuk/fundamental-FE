@@ -1,9 +1,9 @@
 {
-  "language": "Українська",
+  "language": "Ua",
   "translate": "переклад",
   "Main": "Головна",
   "Page wasn't found": "Сторінка не знайдена",
   "Something went wrong": "Щось пішло не так",
-  "Reload page": "Перезавантажити сторінку"
-
+  "Reload page": "Перезавантажити сторінку",
+  "About": "Про нас"
 }
