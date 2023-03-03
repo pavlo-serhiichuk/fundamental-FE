@@ -9,3 +9,5 @@ idea
 /storybook-static
 /extractedTranslations
 /extractedTranslations/en/translation.json
+.loki/report.json
+.loki/report.html
