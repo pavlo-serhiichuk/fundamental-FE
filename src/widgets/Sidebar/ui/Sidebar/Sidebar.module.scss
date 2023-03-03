@@ -26,7 +26,8 @@
 .collapsedBtn {
   position: absolute;
   right: -32px;
-  bottom: 32px;
+  bottom: 12px;
+  border-radius: 0 8px 8px 0;
 }
 
 .items {
@@ -40,6 +41,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 600;
+    text-decoration: none;
   }
 
   .icon {
