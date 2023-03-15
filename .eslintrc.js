@@ -16,11 +16,13 @@ module.exports = {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", 'i18next'],
+  "plugins": ["react", "@typescript-eslint", 'i18next',  "react-hooks"],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
     'i18next/no-literal-string': ['error', {
       markupOnly: true
-    }]
+    }],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "error" // Checks effect dependencies
   }
 };
