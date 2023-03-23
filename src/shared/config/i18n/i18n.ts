@@ -9,6 +9,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: 'ua',
     fallbackLng: 'ua',
     debug: __IS_DEV__ ? true: false,
 
