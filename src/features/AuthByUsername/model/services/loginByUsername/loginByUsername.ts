@@ -8,7 +8,7 @@ interface LoginByUsernameProps {
   username: string
   password: string
 }
-
+                                             // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, { rejectValue: string }>(
   'login/loginByUsername',
   async (authData, thunkAPI) => {
