@@ -21,6 +21,7 @@
 
 .lang {
   margin: 0 0 10px 5px;
+  color: var(--inverted-primary-color);
 }
 
 .collapsedBtn {
@@ -34,18 +35,4 @@
   margin: 10px 0 0 26px;
   display: flex;
   flex-direction: column;
-
-  .item {
-    margin-top: 5px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .icon {
-    fill: var(--inverted-primary-color);
-  }
 }

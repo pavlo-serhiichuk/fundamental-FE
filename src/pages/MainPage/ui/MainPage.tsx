@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next'
 import {Input} from 'shared/ui/Input/Input'
 
-const Main = () => {
+const MainPage = () => {
   const {t} = useTranslation()
   const [value, setValue] = useState('')
 
@@ -12,9 +12,9 @@ const Main = () => {
 
   return (
     <div>
-      <p><b>{t('Main')}</b></p>
+      <p><b>{t('MainPage')}</b></p>
     </div>
   );
 };
 
-export default Main;
+export default MainPage;

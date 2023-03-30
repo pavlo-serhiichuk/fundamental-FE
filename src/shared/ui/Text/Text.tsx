@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, memo} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './Text.module.scss'
@@ -15,7 +15,7 @@ export enum TextTheme {
   ERROR = 'error'
 }
 
-export const Text: FC<TextProps> = (props) => {
+export const Text: FC<TextProps> = memo((props) => {
   const {t} = useTranslation()
   const {
     className,
@@ -30,4 +30,4 @@ export const Text: FC<TextProps> = (props) => {
       {text && <p className={cls.text}>{t(text)}</p>}
     </div>
   );
-};
+});

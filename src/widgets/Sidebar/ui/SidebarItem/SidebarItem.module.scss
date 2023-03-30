@@ -1,0 +1,13 @@
+.item {
+  margin-top: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
