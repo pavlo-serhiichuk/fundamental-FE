@@ -11,6 +11,9 @@ module.exports = {
       'i18next/no-literal-string': 'off'
     }
   }],
+  globals: {
+    __API__: true
+  },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
