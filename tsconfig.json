@@ -9,6 +9,7 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
+    "strict": true,
     // let "require("...") use as import ... from ...
     "esModuleInterop": true,
 //    allow imports without "import * as package from ..."

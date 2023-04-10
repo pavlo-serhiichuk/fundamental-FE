@@ -2,7 +2,7 @@ import {Provider} from 'react-redux'
 import {FC, ReactNode} from 'react'
 import {createReduxStore} from 'app/providers/StoreProvider/config/createReduxStore'
 import {StateSchema} from 'app/providers/StoreProvider/config/StateSchema'
-import {DeepPartial, ReducersMapObject} from '@reduxjs/toolkit'
+import { ReducersMapObject} from '@reduxjs/toolkit'
 import {useNavigate} from 'react-router-dom'
 
 interface StoreProviderProps {

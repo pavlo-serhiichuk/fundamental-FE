@@ -1,20 +1,19 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
-import {About} from 'pages/About'
+import {AboutPage} from 'pages/AboutPage'
+import 'app/styles/index.scss'
 
 export default {
-  title: 'pages/AboutPage',
-  component: About,
+  title: 'pages/AboutPagePage',
+  component: AboutPage,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof About>;
+} as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof About> = (args) => <About {...args} />;
+const Template: ComponentStory<typeof AboutPage> = () => <AboutPage />;
 
 export const Light = Template.bind({});
 Light.args = {}

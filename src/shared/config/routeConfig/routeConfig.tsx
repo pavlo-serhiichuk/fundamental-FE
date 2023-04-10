@@ -1,6 +1,6 @@
 import {RouteProps} from 'react-router-dom'
-import {Main} from 'pages/MainPage'
-import {About} from 'pages/About'
+import {MainPage} from 'pages/MainPage'
+import {AboutPage} from 'pages/AboutPage'
 import {NotFoundPage} from 'pages/NotFoundPage'
 import {Profile} from 'pages/ProfilePage'
 
@@ -23,11 +23,11 @@ export const RoutePath: Record<AppRoutes, string> = {
 export const routeConfig: Record<AppRoutes, RouteProps> = {
   [AppRoutes.MAIN]: {
     path: RoutePath.main,
-    element: <Main />
+    element: <MainPage />
   },
   [AppRoutes.ABOUT]: {
     path: RoutePath.about,
-    element: <About />
+    element: <AboutPage />
   },
   [AppRoutes.PROFILE]: {
     path: RoutePath.profile,

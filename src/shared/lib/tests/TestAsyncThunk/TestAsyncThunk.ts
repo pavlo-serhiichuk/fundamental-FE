@@ -4,7 +4,7 @@ import {loginByUsername} from 'features/AuthByUsername/model/services/loginByUse
 import axios, {AxiosStatic} from 'axios'
 
 // @ts-ignore
-type ActionCreatorType<Return,  Arg, RejectedValue> = AsyncThunkAction<Return,  Arg, {rejectedValue: RejectedValue}>
+type ActionCreatorType<Return, Arg, RejectedValue> = (arg: Arg) => AsyncThunkAction<Return, Arg, { rejectValue: RejectedValue }>
 
 jest.mock('axios')
 
@@ -13,12 +13,12 @@ const mockedAxios = jest.mocked(axios, true)
 export class TestAsyncThunk<Return,  Arg, RejectedValue> {
   dispatch: jest.MockedFn<any>
   getState: () => StateSchema
-  actionCreator: (arg: Arg) => ActionCreatorType<Return,  Arg, RejectedValue>
+  actionCreator: ActionCreatorType<Return,  Arg, RejectedValue>
 
   api: jest.MockedFunctionDeep<AxiosStatic>;
   navigate: jest.MockedFn<any>
 
-  constructor(actionCreator: (arg: Arg) => ActionCreatorType<Return,  Arg, RejectedValue> ) {
+  constructor(actionCreator: ActionCreatorType<Return,  Arg, RejectedValue> ) {
     this.actionCreator = actionCreator
     this.dispatch = jest.fn()
     this.getState = jest.fn()

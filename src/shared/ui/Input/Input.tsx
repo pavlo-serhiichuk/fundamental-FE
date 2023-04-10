@@ -21,13 +21,14 @@ export const Input:FC<InputProps> = memo((props) => {
     autofocus = false,
     ...otherProps
   } = props
+
   const ref = useRef<HTMLInputElement>(null);
   const [isFocus, setIsFocus] = useState(false)
 
   useEffect(() => {
     if (autofocus) {
       setIsFocus(true)
-      ref.current.focus()
+      ref.current?.focus()
     }
   }, [autofocus])
 

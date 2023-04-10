@@ -19,7 +19,7 @@ export const Text: FC<TextProps> = memo((props) => {
   const {t} = useTranslation()
   const {
     className,
-    theme,
+    theme = TextTheme.PRIMARY,
     title,
     text
   } = props
