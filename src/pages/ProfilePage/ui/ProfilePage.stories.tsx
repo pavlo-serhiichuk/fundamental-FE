@@ -1,10 +1,9 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
-import ProfilePage from './ProfilePage'
+import {ProfilePage} from '../index'
 import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
@@ -16,12 +15,12 @@ export default {
 } as ComponentMeta<typeof ProfilePage>;
 
 // @ts-ignore
-const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
+const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};
 
-Light.decorators = [StoreDecorator({})]
+Primary.decorators = [StoreDecorator({})]
 
 export const Dark = Template.bind({});
 Dark.args = {}
