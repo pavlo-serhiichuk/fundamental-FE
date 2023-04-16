@@ -5,6 +5,7 @@ import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
 import {Sidebar} from './Sidebar'
+import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'widgets/Sidebar',
@@ -16,10 +17,13 @@ export default {
 
 const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {}
+export const Primary = Template.bind({});
+Primary.args = {}
+
+Primary.decorators = [StoreDecorator({})]
+
 
 export const Dark = Template.bind({});
 Dark.args = {}
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

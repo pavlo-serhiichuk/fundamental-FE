@@ -24,5 +24,5 @@ Primary.decorators = [StoreDecorator({})]
 
 export const Dark = Template.bind({});
 Dark.args = {}
-
+//{profile: {data: {username: 'Pavlo', firstname: 'Pavlo', lastname: 'Serh'}}}
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

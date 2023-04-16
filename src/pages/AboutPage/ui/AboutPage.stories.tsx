@@ -6,7 +6,7 @@ import {AboutPage} from 'pages/AboutPage'
 import 'app/styles/index.scss'
 
 export default {
-  title: 'pages/AboutPagePage',
+  title: 'pages/AboutPage',
   component: AboutPage,
   argTypes: {
     backgroundColor: { control: 'color' },
