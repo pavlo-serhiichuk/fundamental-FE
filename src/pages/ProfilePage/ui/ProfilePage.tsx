@@ -9,13 +9,14 @@ import {
   getProfileReadonly,
   ProfileCard,
   profileActions,
-  profileReducer
+  profileReducer, getProfileValidateErrors, ValidateProfileError
 } from 'entities/Profile'
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
 import {useSelector} from 'react-redux'
 import {ProfilePageHeader} from './ProfilePageHeader/ProfilePageHeader'
 import {Currency} from 'entities/Currency'
 import {Country} from 'entities/Country'
+import {Text, TextTheme} from 'shared/ui/Text/Text'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -34,10 +35,20 @@ const ProfilePage: FC<ProfileProps> = () => {
   const error = useSelector(getProfileError)
   const isLoading = useSelector(getProfileIsLoading)
   const readonly = useSelector(getProfileReadonly)
+  const validateErrors = useSelector(getProfileValidateErrors)
 
   useEffect(() => {
     dispatch(fetchProfileData())
   }, [])
+
+  const validateErrorTranslates = {
+    [ValidateProfileError.NO_DATA]: t(''),
+    [ValidateProfileError.SERVER_ERROR]: t('Server error during saving'),
+    [ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect country'),
+    [ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+    [ValidateProfileError.INCORRECT_USER_DATA]: t('User should have a firstname and a lastname')
+  }
+
 
   const onChangeFirstname = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({firstname: value || ''}))
@@ -74,6 +85,7 @@ const ProfilePage: FC<ProfileProps> = () => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <ProfilePageHeader />
+      {validateErrors?.length && validateErrors.map(err => <Text key={err} text={validateErrorTranslates[err]} theme={TextTheme.ERROR} />)}
       <ProfileCard
         data={formData}
         error={error}

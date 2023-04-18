@@ -28,7 +28,7 @@
   "profile": {
     "firstname": "Pavlo",
     "lastname": "Serh",
-    "age": "27",
+    "age": 20,
     "country": "Ukraine",
     "city": "Kyiv",
     "username": "admin",
