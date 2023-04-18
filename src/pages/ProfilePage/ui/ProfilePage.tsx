@@ -38,7 +38,9 @@ const ProfilePage: FC<ProfileProps> = () => {
   const validateErrors = useSelector(getProfileValidateErrors)
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [])
 
   const validateErrorTranslates = {
@@ -58,7 +60,7 @@ const ProfilePage: FC<ProfileProps> = () => {
     dispatch(profileActions.updateProfile({lastname: value || ''}))
   }, [dispatch])
 
- const onChangeCity = useCallback((value?: string) => {
+  const onChangeCity = useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({city: value || ''}))
   }, [dispatch])
 
@@ -85,7 +87,8 @@ const ProfilePage: FC<ProfileProps> = () => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <ProfilePageHeader />
-      {validateErrors?.length && validateErrors.map(err => <Text key={err} text={validateErrorTranslates[err]} theme={TextTheme.ERROR} />)}
+      {validateErrors?.length && validateErrors.map(err => <Text key={err} text={validateErrorTranslates[err]}
+                                                                 theme={TextTheme.ERROR} />)}
       <ProfileCard
         data={formData}
         error={error}

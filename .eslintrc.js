@@ -12,7 +12,9 @@ module.exports = {
     }
   }],
   globals: {
-    __API__: true
+    __API__: true,
+    __IS_DEV__: true,
+    __PROJECT__: true,
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
