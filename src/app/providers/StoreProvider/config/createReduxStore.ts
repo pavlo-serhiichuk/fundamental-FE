@@ -4,13 +4,12 @@ import {counterReducer} from 'entities/Counter'
 import {userReducer} from 'entities/User'
 import {createReducerManager} from 'app/providers/StoreProvider/config/reducerManager'
 import {$api} from 'shared/api/api'
-import {To} from 'history'
 import {NavigateOptions} from 'react-router'
 
 export function createReduxStore (
   initialState?: StateSchema,
   asyncReducers?: ReducersMapObject<StateSchema>,
-  navigate?: (to: To, options?: NavigateOptions) => void
+  navigate?: (to: any, options?: NavigateOptions) => void
 ) {
                         // тип          // дженерик
   const storeReducers: ReducersMapObject<StateSchema> = {
