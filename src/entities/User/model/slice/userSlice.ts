@@ -2,7 +2,9 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit'
 import {User, UserSchema} from '../types/userSchema'
 import {USER_LOCALSTORAGE} from 'shared/consts/localStorage'
 
-const initialState: UserSchema = {}
+const initialState: UserSchema = {
+  _init: false
+}
 
 export const userSlice = createSlice({
   name: 'user',
@@ -17,6 +19,7 @@ export const userSlice = createSlice({
       if (user) {
         state.authData = user
       }
+      state._init = true
     },
     logout: (state) => {
       state.authData = undefined
