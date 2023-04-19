@@ -54,7 +54,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
     )
   }
 
- if (error) {
+  if (error) {
     return (
       <div className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
         <Text
@@ -67,9 +67,9 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
     )
   }
 
- const mods: Mods = {
-   [cls.editing]: !readonly,
- }
+  const mods: Mods = {
+    [cls.editing]: !readonly,
+  }
 
   return (
     <div className={classNames(cls.ProfileCard, mods, [className])}>
@@ -77,7 +77,7 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
         {data?.avatar && (
           <div className={cls.avatarWrapper}>
             <Avatar size={150} alt="avatar" src={data?.avatar} />
-        </div>
+          </div>
         )}
         <Input
           value={data?.firstname}
