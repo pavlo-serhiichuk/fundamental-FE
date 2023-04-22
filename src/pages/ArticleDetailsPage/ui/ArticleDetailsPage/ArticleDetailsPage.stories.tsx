@@ -1,20 +1,19 @@
-import React, {Suspense} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
-import {MainPage} from 'pages/MainPage'
+import ArticleDetailsPage from './ArticleDetailsPage'
 
 export default {
-  title: 'pages/MainPage',
-  component: MainPage,
+  title: 'pages/ArticleDetailsPage',
+  component: ArticleDetailsPage,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof MainPage>;
+} as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof MainPage> = () => <MainPage />;
+const Template: ComponentStory<typeof ArticleDetailsPage> = () => <ArticleDetailsPage />;
 
 export const Light = Template.bind({});
 Light.args = {}
