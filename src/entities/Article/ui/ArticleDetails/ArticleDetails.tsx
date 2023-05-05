@@ -22,6 +22,7 @@ import {ArticleBlock, ArticleBlockType} from '../../model/types/article'
 import {ArticleCodeBlockComponent} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import {ArticleTextBlockComponent} from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import {ArticleImageBlockComponent} from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
+import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
 
 interface ArticleDetailsProps {
   className?: string;
@@ -35,6 +36,8 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
+
+  useInitialEffect(() => dispatch(fetchArticleById(id)))
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch(block.type) {
@@ -60,12 +63,6 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
         return null
     }
   }, [])
-
-  useEffect(() => {
-    if(__PROJECT__ !== 'storybook') {
-      dispatch(fetchArticleById(id))
-    }
-  }, [dispatch, id])
 
   let content
 

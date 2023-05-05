@@ -6,8 +6,12 @@
   gap: 10px;
   font-weight: 600;
   text-decoration: none;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .icon {
   fill: var(--inverted-primary-color);
+  min-width: 20px;
 }

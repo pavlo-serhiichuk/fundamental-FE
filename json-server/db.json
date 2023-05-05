@@ -105,13 +105,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
     },
     {
-      "id": "1",
+      "id": "2",
       "username": "user",
       "password": "321",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
     }
   ],
   "profile": {
@@ -121,7 +123,7 @@
     "country": "Ukraine",
     "city": "Kyiv",
     "username": "admin",
-    "avatar": "https://scontent.fiev22-1.fna.fbcdn.net/v/t1.6435-9/117732137_331177674726150_6549843426398612487_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=p1HyMmVw1vAAX9PDyRr&_nc_ht=scontent.fiev22-1.fna&oh=00_AfBzHjFoHHeMOY-_ATEl_WvZTXOvp7qJewuIHir39LfPsQ&oe=644C9366",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
     "currency": "USD"
   }
 }

@@ -1,8 +1,8 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {ThunkConfig} from 'app/providers/StoreProvider'
 import {Profile} from 'entities/Profile'
-import {getProfileForm} from '../selectors/getProfileForm/getProfileForm'
-import {validateProfileData} from '../services/validateProfileData'
+import {getProfileForm} from '../../selectors/getProfileForm/getProfileForm'
+import {validateProfileData} from '../validateProfileData/validateProfileData'
 import {ValidateProfileError} from 'entities/Profile/model/types/profile'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка

@@ -1,10 +1,10 @@
 import {CSSProperties, FC, useMemo} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './Avatar.module.scss'
-
+import DefImage from 'shared/assets/test/programmer.jpeg'
 interface AvatarProps {
   className?: string;
-  src: string
+  src?: string | undefined
   size?: number;
   alt?: string
 }
@@ -12,7 +12,7 @@ interface AvatarProps {
 export const Avatar: FC<AvatarProps> = (props) => {
   const {
     className,
-    src,
+    src = DefImage,
     size,
     alt
   } = props

@@ -9,13 +9,14 @@ interface SkeletonProps {
   height?: string | number
   width?: string | number
   borderRadius?: string
+  marginTop?: string | number
 }
 
 export const Skeleton: FC<SkeletonProps> = memo((props) => {
-  const {className, height, width, borderRadius} = props
+  const {className, height, width, borderRadius, marginTop} = props
 
   const styles: CSSProperties = {
-    height, width, borderRadius
+    height, width, borderRadius, marginTop
   }
 
   return (

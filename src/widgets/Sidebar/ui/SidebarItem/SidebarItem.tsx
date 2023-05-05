@@ -25,7 +25,7 @@ export const SidebarItem: FC<SidebarItemProps> = memo(({item, collapsed}) => {
         theme={AppLinkTheme.SECONDARY}
         className={cls.item}>
         <item.Icon className={cls.icon} />
-        {collapsed ? '' : <span className={cls.link}>{t(item.text)}</span>}
+        {collapsed ? '' : <span>{t(item.text)}</span>}
       </AppLink>
   );
 });

@@ -1,0 +1,11 @@
+.CommentItem {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
