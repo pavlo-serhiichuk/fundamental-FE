@@ -1,7 +1,6 @@
 import {CSSProperties, FC, useMemo} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './Avatar.module.scss'
-import DefImage from 'shared/assets/test/programmer.jpeg'
 
 interface AvatarProps {
   className?: string;
@@ -13,7 +12,7 @@ interface AvatarProps {
 export const Avatar: FC<AvatarProps> = (props) => {
   const {
     className,
-    src = DefImage,
+    src = 'https://t3.ftcdn.net/jpg/05/11/52/90/360_F_511529094_PISGWTmlfmBu1g4nocqdVKaHBnzMDWrN.jpg',
     size,
     alt
   } = props
@@ -23,7 +22,6 @@ export const Avatar: FC<AvatarProps> = (props) => {
     height: size || 50
   }), [size])
 
-  console.log('src', src)
   return (
     <img
       alt={alt}
