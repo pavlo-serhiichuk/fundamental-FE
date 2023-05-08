@@ -5,6 +5,6 @@ export const useInitialEffect = (callback: () => void) => {
     if (__PROJECT__ !== 'storybook') {
       callback()
     }
-    //@ts-ignore
+    // eslint-disable-next-line
   }, [])
 }

@@ -10,7 +10,7 @@ import {SidebarItemType} from '../types/sidebar'
 export const getSidebarItems = createSelector(
   getUserAuthData,
   (userData) => {
-    let sidebarItemsList: SidebarItemType[] = [
+    const sidebarItemsList: SidebarItemType[] = [
       {
         path: RoutePath.main,
         Icon: MainIcon,
