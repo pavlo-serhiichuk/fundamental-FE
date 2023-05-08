@@ -4,12 +4,17 @@ import {Profile} from 'entities/Profile'
 
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
-export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<string>>(
+export const fetchProfileData = createAsyncThunk<Profile, string | undefined, ThunkConfig<string>>(
   'login/fetchProfileData',
-  async (_, thunkAPI) => {
+  async (profileId, thunkAPI) => {
     const {extra, rejectWithValue} = thunkAPI
+
+    if(!profileId) {
+      return rejectWithValue('no id found')
+    }
+
     try {
-      const response = await extra.api.get<Profile>('/profile')
+      const response = await extra.api.get<Profile>('/profile/' + profileId)
 
       if(!response.data) {
         throw new Error()

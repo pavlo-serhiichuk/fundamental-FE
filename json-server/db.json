@@ -19,7 +19,6 @@
           "paragraphs": [
             "Ніндзя-програмісти минулого використовували деякі хитрощі, щоб загострити розум тих, хто буде підтримувати їх код.\n\nГуру, що перевіряють код, шукають їх у тестових завданнях.\n\nПочатківці іноді використовують їх краще за ніндзя-програмістів.\n\nУважно перечитайте ці хитрощі і вирішіть хто ви є — ніндзя, початківець, чи може гуру перевірки коду?",
             "Ніндзя-програмісти минулого використовували деякі хитрощі, щоб загострити розум тих, хто буде підтримувати їх код."
-
           ]
         },
         {
@@ -86,18 +85,44 @@
     {
       "id": "1",
       "text": "some comment",
-      "postId": "1",
+      "articleId": "1",
       "userId": "1"
-    },{
+    },
+    {
       "id": "2",
       "text": "some comment. comment continuation ",
-      "postId": "1",
+      "articleId": "2",
       "userId": "2"
-    },{
+    },
+    {
       "id": "3",
       "text": "some comment",
-      "postId": "1",
+      "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "321",
+      "id": "SEFrp5q"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "999",
+      "id": "kEh1Bh6"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "shh",
+      "id": "YAxttc5"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "234",
+      "id": "MCYS1Xv"
     }
   ],
   "users": [
@@ -105,8 +130,7 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+      "role": "ADMIN"
     },
     {
       "id": "2",
@@ -116,14 +140,27 @@
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
     }
   ],
-  "profile": {
-    "firstname": "Pavlo",
-    "lastname": "Serh",
-    "age": 20,
-    "country": "Ukraine",
-    "city": "Kyiv",
-    "username": "admin",
-    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
-    "currency": "USD"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Pavlo",
+      "lastname": "Serh",
+      "age": 20,
+      "country": "Ukraine",
+      "city": "Kyiv",
+      "username": "admin",
+      "currency": "USD"
+    },
+    {
+      "id": "2",
+      "firstname": "Gogig",
+      "lastname": "Perhot",
+      "age": 20,
+      "country": "Armenia",
+      "city": "Yerevan",
+      "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
+      "currency": "USD"
+    }
+  ]
 }

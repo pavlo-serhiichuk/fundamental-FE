@@ -17,6 +17,8 @@ import {ProfilePageHeader} from './ProfilePageHeader/ProfilePageHeader'
 import {Currency} from 'entities/Currency'
 import {Country} from 'entities/Country'
 import {Text, TextTheme} from 'shared/ui/Text/Text'
+import {useParams} from 'react-router-dom'
+import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -36,12 +38,9 @@ const ProfilePage: FC<ProfileProps> = () => {
   const isLoading = useSelector(getProfileIsLoading)
   const readonly = useSelector(getProfileReadonly)
   const validateErrors = useSelector(getProfileValidateErrors)
+  const {id} = useParams<{id: string}>()
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
-    }
-  }, [])
+  useInitialEffect(() => dispatch(fetchProfileData(id)))
 
   const validateErrorTranslates = {
     [ValidateProfileError.NO_DATA]: t(''),

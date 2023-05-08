@@ -74,49 +74,47 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
   return (
     <div className={classNames(cls.ProfileCard, mods, [className])}>
       <div className={cls.data}>
-        {data?.avatar && (
           <div className={cls.avatarWrapper}>
             <Avatar size={150} alt="avatar" src={data?.avatar} />
           </div>
-        )}
         <Input
           value={data?.firstname}
-          placeholder={t('Your name')}
+          label={t('Your name')}
           className={cls.input}
           onChange={onChangeFirstname}
           readonly={readonly}
         />
         <Input
           value={data?.lastname}
-          placeholder={t('Your lastname')}
+          label={t('Your lastname')}
           className={cls.input}
           onChange={onChangeLastname}
           readonly={readonly}
         />
         <Input
           value={data?.age}
-          placeholder={t('Your age')}
+          label={t('Your age')}
           className={cls.input}
           onChange={onChangeAge}
           readonly={readonly}
         />
         <Input
           value={data?.city}
-          placeholder={t('Your city')}
+          label={t('Your city')}
           className={cls.input}
           onChange={onChangeCity}
           readonly={readonly}
         />
         <Input
           value={data?.username}
-          placeholder={t('Username')}
+          label={t('Username')}
           className={cls.input}
           onChange={onChangeUsername}
           readonly={readonly}
         />
         <Input
           value={data?.avatar}
-          placeholder={t('Avatar link')}
+          label={t('Avatar link')}
           className={cls.input}
           onChange={onChangeAvatar}
           readonly={readonly}

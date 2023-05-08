@@ -1,0 +1,11 @@
+.AddCommentForm {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+.commentInput {
+  width: calc(100vw - 476px);
+}

@@ -6,10 +6,12 @@ import {Comment} from '../../model/types/comment'
 import {Skeleton} from 'shared/ui/Skeleton/Skeleton'
 import {Text, TextSize} from 'shared/ui/Text/Text'
 import {Avatar} from 'shared/ui/Avatar/Avatar'
+import {AppLink} from 'shared/ui/AppLink/AppLink'
+import {RoutePath} from 'shared/config/routeConfig/routeConfig'
 
 interface CommentItemProps {
   className?: string;
-  comment: Comment
+  comment?: Comment
   isLoading?: boolean
 }
 
@@ -25,22 +27,26 @@ export const CommentItem: FC<CommentItemProps> = memo((props) => {
   if (isLoading) {
     return (
       <div className={classNames(cls.CommentItem, {}, [className])}>
-        <Skeleton borderRadius={'50%'} height={50} width={50} />
         <div className={cls.userInfo}>
+          <Skeleton borderRadius={'50%'} height={50} width={50} />
           <Skeleton height={30} width={150} />
-          <Skeleton height={50} width={500} marginTop={10}/>
         </div>
+        <Skeleton height={50} width={500} marginTop={10} />
       </div>
     )
   }
 
+  if(!comment) {
+    return null
+  }
+
   return (
     <div className={classNames(cls.CommentItem, {}, [className])}>
-      <Avatar size={50} src={comment.user?.avatar} />
-      <div className={cls.userInfo}>
+      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.userInfo}>
+        <Avatar size={30} src={comment.user?.avatar} />
         <Text title={comment.user?.username} size={TextSize.M} />
-        <Text text={comment.text} />
-      </div>
-      </div>
+      </AppLink>
+      <Text text={comment.text} />
+    </div>
   );
 });

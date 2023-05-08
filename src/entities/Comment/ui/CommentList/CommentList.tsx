@@ -17,18 +17,24 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
   const {t} = useTranslation()
   const {className, comments, isLoading} = props
 
+  if (isLoading) {
+    return (
+      <div className={classNames(cls.CommentList, {}, [className])}>
+        <CommentItem  isLoading />
+        <CommentItem  isLoading />
+      </div>
+    )
+  }
+
   return (
     <div className={classNames(cls.CommentList, {}, [className])}>
-
-      {comments.length
-        ? comments.map(comment =>
-          <CommentItem
-            key={comment.id}
-            isLoading={isLoading}
-            comment={comment}
-          />)
-        : <Text size={TextSize.L} text={t('No comments for this article')} />
-      }
+      {!comments.length && <Text size={TextSize.L} text={t('No comments for this article')} />}
+      {comments.map(comment =>
+        <CommentItem
+          key={comment.id}
+          isLoading={isLoading}
+          comment={comment}
+        />)}
     </div>
   );
 });

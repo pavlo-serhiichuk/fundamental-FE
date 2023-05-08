@@ -4,11 +4,15 @@ import {StateSchema, StoreProvider} from 'app/providers/StoreProvider'
 import {ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {profileReducer} from 'entities/Profile'
 import {articleDetailsReducer} from 'entities/Article/model/slice/articleDetailsSlice'
+import {addCommentFormReducer} from 'features/addCommentForm/model/slice/addCommentFormSlice'
+import {articleDetailsCommentsReducer} from 'pages/ArticleDetailsPage/model/slices/ArticleDetailsCommentsSlice'
 
 const defAsyncReducers: ReducersList = {
   loginForm: loginReducer,
   profile: profileReducer,
-  articleDetails: articleDetailsReducer
+  articleDetails: articleDetailsReducer,
+  addCommentForm: addCommentFormReducer,
+  articleDetailsComments: articleDetailsCommentsReducer
 }
 
 export const StoreDecorator = (

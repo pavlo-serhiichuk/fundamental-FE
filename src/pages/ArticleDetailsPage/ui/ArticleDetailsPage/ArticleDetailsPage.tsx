@@ -1,4 +1,4 @@
-import {FC, memo} from 'react'
+import {FC, memo, useCallback} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './ArticleDetailsPage.module.scss'
@@ -16,7 +16,9 @@ import {
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
 import {fetchArticleById} from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
-import {fetchCommentsByArticleId} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId'
+import {fetchCommentsByArticleId} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import {AddCommentForm} from 'features/addCommentForm'
+import {addCommentForArticle} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -36,7 +38,9 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const dispatch = useAppDispatch()
 
   useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)))
-
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text))
+  }, [dispatch])
   if(!id) {
     return (
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -50,6 +54,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentsTitle} title={t('Comments')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList
           isLoading={isCommentsLoading}
           comments={comments} />
