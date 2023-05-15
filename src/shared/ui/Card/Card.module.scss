@@ -1,0 +1,11 @@
+.Card {
+  background-color: var(--card-bg);
+  transition: all 0.3s;
+  border-radius: 10px;
+  padding: 10px;
+
+  &:hover {
+    transform: scale(1.01);
+    opacity: 0.95;
+  }
+}

@@ -1,0 +1,15 @@
+.ArticleList {
+  position: relative;
+}
+
+.small_articles_view {
+  display: inline-flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.big_articles_view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
