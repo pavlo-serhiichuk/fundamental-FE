@@ -29,10 +29,10 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
     dispatch(addCommentFormActions.setText(value))
   }, [dispatch])
 
-  const onSendHandler = () => useCallback(() => {
+  const onSendHandler = useCallback(() => {
     onSendComment(text || '')
     onCommentTextChange('')
-  }, [onCommentTextChange, onSendComment])
+  }, [onCommentTextChange, onSendComment, text])
 
   return (
     <DynamicModuleLoader reducers={reducers}>
