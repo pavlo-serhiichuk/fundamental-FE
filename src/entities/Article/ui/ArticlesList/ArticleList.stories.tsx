@@ -2,6 +2,8 @@ import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {ArticleList} from './ArticleList';
 import {Article, ArticleView} from '../../model/types/article'
+import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import {Primary} from 'pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.stories'
 
 const article: Article = {
   "id": "1",
@@ -96,6 +98,7 @@ Big.args = {
   articles: new Array(16).fill(0).map((_, i) => ({...article, id: String(i)})),
   view: ArticleView.BIG
 };
+Big.decorators = [StoreDecorator({})];
 
 export const Small = Template.bind({});
 
@@ -104,6 +107,7 @@ Small.args = {
   articles: new Array(16).fill(0).map((_, i) => ({...article, id: String(i)})),
   view: ArticleView.SMALL
 };
+Small.decorators = [StoreDecorator({})];
 
 export const isLoadingBig = Template.bind({});
 
@@ -113,6 +117,8 @@ isLoadingBig.args = {
   view: ArticleView.BIG
 };
 
+isLoadingBig.decorators = [StoreDecorator({})];
+
 export const isLoadingSmall = Template.bind({});
 
 isLoadingSmall.args = {
@@ -120,3 +126,4 @@ isLoadingSmall.args = {
   articles: [],
   view: ArticleView.SMALL
 };
+isLoadingSmall.decorators = [StoreDecorator({})];

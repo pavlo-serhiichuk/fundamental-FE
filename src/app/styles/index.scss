@@ -18,10 +18,3 @@ body {
   display: grid;
   grid-template-columns: 300px 1fr;
 }
-
-.page-wrapper {
-  padding: 20px 20px 20px 40px;
-  height: calc(100vh - var(--navbar-height));
-  overflow-y: auto;
-  width: 100%;
-}

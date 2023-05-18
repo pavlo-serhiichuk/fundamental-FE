@@ -16,5 +16,7 @@ const Template: ComponentStory<typeof ArticlesPage> = () => <ArticlesPage />;
 
 export const Primary = Template.bind({});
 
-Primary.args = {};
+Primary.args = {
+
+};
 Primary.decorators = [StoreDecorator({})];

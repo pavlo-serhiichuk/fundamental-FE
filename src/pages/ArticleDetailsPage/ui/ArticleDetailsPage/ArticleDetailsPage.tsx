@@ -21,6 +21,7 @@ import {AddCommentForm} from 'features/addCommentForm'
 import {addCommentForArticle} from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle'
 import {Button} from 'shared/ui/Button/Button'
 import {RoutePath} from 'shared/config/routeConfig/routeConfig'
+import {Page} from 'shared/ui/Page/Page'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -57,7 +58,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button onClick={onBackToArticles}>
           {t('Back to articles')}
         </Button>
@@ -67,7 +68,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         <CommentList
           isLoading={isCommentsLoading}
           comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

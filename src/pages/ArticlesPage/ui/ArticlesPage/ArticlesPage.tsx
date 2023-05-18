@@ -1,4 +1,4 @@
-import {FC, memo, useCallback} from 'react'
+import {FC, memo, useCallback, useState} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ArticlesPage.module.scss'
 import {ArticleList, ArticleView, ArticleViewSelector} from 'entities/Article'
@@ -10,9 +10,11 @@ import {fetchArticlesList} from '../../model/services/fetchArticlesList'
 import {useSelector} from 'react-redux'
 import {
   getArticlesListError,
-  getArticlesListIsLoading,
+  getArticlesListIsLoading, getArticlesPageHasMore, getArticlesPageNum,
   getArticlesPageView
 } from '../../model/selectors/getArticlesListSelectors'
+import {Page} from 'shared/ui/Page/Page'
+import {fetchNextArticlesList} from 'pages/ArticlesPage/model/services/fetchNextArticlesList/fetchNextArticlesList'
 
 interface ArticlesPageProps {
   className?: string;
@@ -30,25 +32,38 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const error = useSelector(getArticlesListError)
   const view = useSelector(getArticlesPageView)
 
+
   useInitialEffect(() => {
-    dispatch(fetchArticlesList())
     dispatch(articlesPageActions.initState())
+    dispatch(fetchArticlesList({page: 1}))
   })
 
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view))
   }, [dispatch])
 
+  const onLoadNextPart = useCallback(() => {
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchNextArticlesList())
+    }
+  }, [dispatch])
+
+  if (error) {
+    return <div>oh shit... here we again</div>
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticlesPage, {}, [className])}>
+      <Page
+        onScrollEnd={onLoadNextPart}
+        className={classNames(cls.ArticlesPage, {}, [className])}>
         <ArticleViewSelector onViewClick={onChangeView} view={view} />
         <ArticleList
           articles={articles}
           isLoading={isLoading}
           view={view}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

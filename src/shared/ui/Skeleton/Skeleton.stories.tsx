@@ -38,10 +38,3 @@ PrimaryDark.args = {
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const CircleDark = Template.bind({});
-
-CircleDark.args = {
-  borderRadius:'50%',
-  width: 100,
-  height: 100
-};
-CircleDark.decorators = [ThemeDecorator(Theme.DARK)]

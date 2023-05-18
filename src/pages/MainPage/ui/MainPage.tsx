@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next'
-import {Input} from 'shared/ui/Input/Input'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {Page} from 'shared/ui/Page/Page'
 
 const MainPage = () => {
   const {t} = useTranslation()
@@ -11,9 +10,9 @@ const MainPage = () => {
   }
 
   return (
-    <div>
+    <Page>
       <p><b>{t('Main page')}</b></p>
-    </div>
+    </Page>
   );
 };
 
