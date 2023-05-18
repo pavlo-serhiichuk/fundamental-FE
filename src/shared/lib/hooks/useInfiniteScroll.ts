@@ -13,7 +13,7 @@ export const useInfiniteScroll = ({callback, triggerRef, wrapperRef}: UseInfinit
     const triggerElement = triggerRef.current
 
     if (callback) {
-      let options = {
+      const options = {
         root: wrapperElement,
         rootMargin: '0px',
         threshold: 1.0

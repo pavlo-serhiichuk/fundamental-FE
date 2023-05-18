@@ -4,8 +4,6 @@ import {
   getArticleDetailsIsLoading,
   getArticleDetailsError
 } from './articleDetails'
-import {Country} from 'entities/Country'
-import {Currency} from 'entities/Currency'
 
 describe('articleDetails', () => {
   test('should return data', () => {
