@@ -1,4 +1,4 @@
-import {FC, memo, useCallback, useState} from 'react'
+import {FC, memo, useCallback} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ArticlesPage.module.scss'
 import {ArticleList, ArticleView, ArticleViewSelector} from 'entities/Article'
@@ -6,15 +6,16 @@ import {articlesPageActions, articlesPageReducer, getArticles} from '../../model
 import {DynamicModuleLoader} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
-import {fetchArticlesList} from '../../model/services/fetchArticlesList'
 import {useSelector} from 'react-redux'
 import {
   getArticlesListError,
-  getArticlesListIsLoading, getArticlesPageHasMore, getArticlesPageNum,
+  getArticlesListIsLoading,
+  getArticlesPage_Inited,
   getArticlesPageView
 } from '../../model/selectors/getArticlesListSelectors'
 import {Page} from 'shared/ui/Page/Page'
-import {fetchNextArticlesList} from 'pages/ArticlesPage/model/services/fetchNextArticlesList/fetchNextArticlesList'
+import {fetchNextArticlesList} from '../../model/services/fetchNextArticlesList/fetchNextArticlesList'
+import {initArticlesPage} from '../../model/services/initArticlesPage/initArticlesPage'
 
 interface ArticlesPageProps {
   className?: string;
@@ -31,11 +32,10 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const isLoading = useSelector(getArticlesListIsLoading)
   const error = useSelector(getArticlesListError)
   const view = useSelector(getArticlesPageView)
-
+  const inited = useSelector(getArticlesPage_Inited)
 
   useInitialEffect(() => {
-    dispatch(articlesPageActions.initState())
-    dispatch(fetchArticlesList({page: 1}))
+      dispatch(initArticlesPage())
   })
 
   const onChangeView = useCallback((view: ArticleView) => {
@@ -53,7 +53,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}>
