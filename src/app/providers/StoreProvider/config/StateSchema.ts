@@ -9,10 +9,12 @@ import {ArticleDetailsSchema} from 'entities/Article'
 import {ArticleDetailsCommentsSchema} from 'pages/ArticleDetailsPage'
 import {AddCommentFormSchema} from 'features/addCommentForm'
 import {ArticlesPageSchema} from 'pages/ArticlesPage'
+import {UIDetectorSchema} from 'features/UlDetector'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
+  uiDetector: UIDetectorSchema
 
   //async reducers
   loginForm?: LoginSchema
