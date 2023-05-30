@@ -1,10 +1,19 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {ThunkConfig} from 'app/providers/StoreProvider'
 import {Article} from 'entities/Article'
-import {getArticlesPageLimit} from 'pages/ArticlesPage/model/selectors/getArticlesListSelectors'
+import {
+  getArticlesPageLimit,
+  getArticlesPageNum,
+  getArticlesPageOrder,
+  getArticlesPageSearch,
+  getArticlesPageSort,
+  getArticlesPageType
+} from 'pages/ArticlesPage/model/selectors/getArticlesListSelectors'
+import {addQueryParams} from 'shared/lib/url/addQueryParams'
+import {ArticleType} from 'entities/Article/model/types/article'
 
 interface FetchArticlesListProps {
-  page?: number
+  replace?: boolean
 }
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
@@ -12,15 +21,25 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
   'articlesPage/fetchArticlesList',
   async (props, thunkAPI) => {
     const {extra, rejectWithValue, getState} = thunkAPI
-    const {page = 1} = props
-  const limit = getArticlesPageLimit(getState())
-
+    const page = getArticlesPageNum(getState())
+    const limit = getArticlesPageLimit(getState())
+    const sort = getArticlesPageSort(getState())
+    const order = getArticlesPageOrder(getState())
+    const search = getArticlesPageSearch(getState())
+    const type = getArticlesPageType(getState())
     try {
+      addQueryParams({
+        sort, order, search, type
+      })
       const response = await extra.api.get<Article[]>(`/articles`, {
         params: {
           _expand: 'user',
           _limit: limit,
-          _page: page
+          _page: page,
+          _sort: sort ,
+          _order: order,
+          q: search,
+          type: type === ArticleType.ALL ? undefined: type
         }
       })
 

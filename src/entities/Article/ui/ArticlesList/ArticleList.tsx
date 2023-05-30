@@ -1,12 +1,13 @@
-import {FC} from 'react'
+import {FC, memo} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
-import {memo} from 'react'
 import {Article, ArticleView} from '../../model/types/article'
 import {ArticleItem} from '../ArticleItem/ArticleItem'
 import {ArticleItemSkeleton} from 'entities/Article/ui/ArticleItem/ArticleListItemSkeleton'
 import {useSelector} from 'react-redux'
 import {getArticlesPageHasMore} from 'pages/ArticlesPage/model/selectors/getArticlesListSelectors'
+import {Text, TextSize} from 'shared/ui/Text/Text'
+import {useTranslation} from 'react-i18next'
 
 interface ArticleListProps {
   className?: string;
@@ -22,6 +23,7 @@ const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL
   ))
 
 export const ArticleList: FC<ArticleListProps> = memo((props) => {
+  const {t} = useTranslation()
   const {className, articles, isLoading, view} = props
   const hasMore = useSelector(getArticlesPageHasMore)
   const renderArticle = (article: Article) => {
@@ -29,6 +31,13 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
       <ArticleItem key={article.id} article={article} view={view} />
     )
   }
+
+  if(!isLoading && !articles.length) {
+    return <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+      <Text text={t('No article with these params')} size={TextSize.L}/>
+    </div>
+  }
+
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
       {articles.length

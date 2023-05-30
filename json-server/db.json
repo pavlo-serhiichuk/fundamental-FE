@@ -9,8 +9,7 @@
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -74,12 +73,11 @@
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
       "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
-      "views": 1023,
+      "views": 103,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -97,14 +95,12 @@
       "id": "3",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
-      "views": 1023,
+      "views": 10233,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -117,17 +113,18 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "4",
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
       "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
-      "views": 1023,
+      "views": 23,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
         "IT",
-        "Science"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -145,14 +142,12 @@
       "id": "5",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
-      "views": 1023,
+      "views": 5023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -165,7 +160,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "6",
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
@@ -175,7 +171,7 @@
       "userId": "1",
       "type": [
         "IT",
-        "Science"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -193,14 +189,12 @@
       "id": "7",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -213,7 +207,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "8",
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
@@ -222,8 +217,7 @@
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -241,14 +235,12 @@
       "id": "9",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -261,7 +253,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "10",
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
@@ -271,7 +264,7 @@
       "userId": "1",
       "type": [
         "IT",
-        "Science"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -287,16 +280,14 @@
     },
     {
       "id": "11",
-      "title": "How to become a true samurai...",
+      "title": "How to become a true fighter...",
       "subtitle": "... and make others lives harder",
-
-      "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
+      "image": "https://streetfighter.com/assets/images/about_chara_5.png",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -309,7 +300,8 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "12",
       "title": "How to become a true warrior...",
       "subtitle": "... and make others lives harder",
@@ -318,8 +310,7 @@
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -337,14 +328,12 @@
       "id": "13",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -357,17 +346,18 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "14",
-      "title": "How to become a true warrior...",
+      "title": "How to become a true Developer and QA...",
       "subtitle": "... and make others lives harder",
-      "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
-      "views": 1023,
+      "image": "https://www.profguide.io/images/article/a/4/KqdO3bPpEb.jpg",
+      "views": 123,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
         "IT",
-        "Science"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -385,14 +375,12 @@
       "id": "15",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -405,17 +393,17 @@
           ]
         }
       ]
-    },{
+    },
+    {
       "id": "17",
-      "title": "How to become a true warrior...",
+      "title": "How to become a true Developer...",
       "subtitle": "... and make others lives harder",
       "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
       "views": 1023,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {
@@ -433,14 +421,12 @@
       "id": "18",
       "title": "How to become a true samurai...",
       "subtitle": "... and make others lives harder",
-
       "image": "https://as1.ftcdn.net/v2/jpg/03/46/38/58/1000_F_346385816_skdGVJfU6LGlMIZymOwOzhVeSJLSLeH4.jpg",
-      "views": 1023,
+      "views": 199,
       "created": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT",
-        "Science"
+        "IT"
       ],
       "blocks": [
         {

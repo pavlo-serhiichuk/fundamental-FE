@@ -5,6 +5,7 @@ import 'app/styles/index.scss'
 import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from 'app/providers/ThemeProvider'
 import {MainPage} from 'pages/MainPage'
+import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'pages/MainPage',
@@ -18,8 +19,9 @@ const Template: ComponentStory<typeof MainPage> = () => <MainPage />;
 
 export const Light = Template.bind({});
 Light.args = {}
+Light.decorators = [ StoreDecorator({})]
 
 export const Dark = Template.bind({});
 Dark.args = {}
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

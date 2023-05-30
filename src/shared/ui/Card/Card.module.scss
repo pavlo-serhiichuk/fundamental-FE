@@ -9,3 +9,11 @@
     opacity: 0.95;
   }
 }
+
+.normal {
+  background-color: var(--card-bg);
+}
+
+.outlined {
+  border: 2px solid var(--primary-color);
+}
