@@ -18,3 +18,22 @@ body {
   display: grid;
   grid-template-columns: 300px 1fr;
 }
+
+*::-webkit-scrollbar {
+  margin-right: 20px;
+  padding-right: 20px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 40px;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  margin-right: 20px;
+  padding-right: 20px;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+}

@@ -6,6 +6,7 @@ import {fetchArticlesList} from 'pages/ArticlesPage/model/services/fetchArticles
 import {articlesPageActions} from 'pages/ArticlesPage/model/slices/articlesPageSlice'
 import {SortOrder} from 'shared/types'
 import {ArticleSortField} from 'entities/Article'
+import {ArticleType} from 'entities/Article/model/types/article'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(
@@ -18,6 +19,7 @@ export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkCon
       const searchFromUrl = searchParams.get('search')
       const orderFromUrl = searchParams.get('order') as SortOrder
       const sortFromUrl = searchParams.get('sort') as ArticleSortField
+      const typeFromUrl = searchParams.get('type') as ArticleType
 
       if(searchFromUrl) {
         dispatch(articlesPageActions.setSearch(searchFromUrl))
@@ -28,6 +30,10 @@ export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkCon
       }
       if(sortFromUrl) {
         dispatch(articlesPageActions.setSort(sortFromUrl))
+      }
+
+      if(typeFromUrl) {
+        dispatch(articlesPageActions.setType(typeFromUrl))
       }
 
       dispatch(articlesPageActions.initState())
