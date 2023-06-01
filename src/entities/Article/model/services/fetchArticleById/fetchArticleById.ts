@@ -9,12 +9,16 @@ export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<st
   async (articleId, thunkAPI) => {
     const {extra, rejectWithValue} = thunkAPI
     try {
-      const response = await extra.api.get<Article>(`/articles/${articleId}`)
+      const response = await extra.api.get<Article>(`/articles/${articleId}`, {
+        params: {
+          _expend: 'user'
+        }
+      })
 
       if(!response.data) {
         throw new Error()
       }
-
+      console.log(1, response.data)
       return response.data
     } catch (e) {
       return rejectWithValue('Wrong username or password')

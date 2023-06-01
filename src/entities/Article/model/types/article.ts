@@ -56,7 +56,8 @@ export interface Article {
   image: string,
   views: number,
   created: string,
-  user: User
+  user: User,
+  userId?: string,
   "type": ArticleType[],
   blocks: ArticleBlock[]
 }

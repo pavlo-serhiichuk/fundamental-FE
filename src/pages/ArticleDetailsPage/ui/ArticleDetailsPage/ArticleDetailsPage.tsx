@@ -27,6 +27,7 @@ import {
 import {getArticleRecIsLoading} from 'pages/ArticleDetailsPage/model/selectors/recommendations'
 import {fetchArticleRecList} from 'pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
 import {articleDetailsPageReducer} from 'pages/ArticleDetailsPage/model/slices'
+import {ArticleDetailsPageHeader} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -44,11 +45,9 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const recommendations = useSelector(getArticleRecommendations.selectAll)
   const isCommentsLoading = useSelector(getArticleCommentsIsLoading)
   const commentsError = useSelector(getArticleCommentsError)
-
   const isRecLoading = useSelector(getArticleRecIsLoading)
-
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecList())
@@ -64,16 +63,10 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     )
   }
 
-  const onBackToArticles = useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [])
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <Button onClick={onBackToArticles}>
-          {t('Back to articles')}
-        </Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text className={cls.commentsTitle} title={t('Recommendations')} />
         <ArticleList

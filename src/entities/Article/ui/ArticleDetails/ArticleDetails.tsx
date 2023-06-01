@@ -36,7 +36,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
-
+  console.log('article d', article)
   useInitialEffect(() => dispatch(fetchArticleById(id)))
 
   const renderBlock = useCallback((block: ArticleBlock) => {
@@ -116,7 +116,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   }
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.ArticleDetails, {}, [className])}>
         {content}
       </div>

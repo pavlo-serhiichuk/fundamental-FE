@@ -25,7 +25,8 @@ interface TextProps {
 
 export enum TextTheme {
   PRIMARY = 'primary',
-  ERROR = 'error'
+  ERROR = 'error',
+  INVERTED = 'inverted'
 }
 
 export const Text: FC<TextProps> = memo((props) => {
