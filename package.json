@@ -72,6 +72,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.6.0",
     "eslint": "^8.34.0",
+    "eslint-plugin-by-pavlo-plugin": "^0.0.2",
     "eslint-plugin-i18next": "^5.1.2",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
