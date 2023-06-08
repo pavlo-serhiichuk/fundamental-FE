@@ -1,6 +1,6 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {ThunkConfig} from 'app/providers/StoreProvider'
-import {Article} from '../../types/article'
+import {Article} from 'entities/Article'
 
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
