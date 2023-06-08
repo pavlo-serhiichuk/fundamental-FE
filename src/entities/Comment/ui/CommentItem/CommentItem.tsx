@@ -8,6 +8,7 @@ import {Text, TextSize} from 'shared/ui/Text/Text'
 import {Avatar} from 'shared/ui/Avatar/Avatar'
 import {AppLink} from 'shared/ui/AppLink/AppLink'
 import {RoutePath} from 'shared/config/routeConfig/routeConfig'
+import {HStack, VStack} from 'shared/ui/Stack'
 
 interface CommentItemProps {
   className?: string;
@@ -26,27 +27,29 @@ export const CommentItem: FC<CommentItemProps> = memo((props) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentItem, {}, [className])}>
-        <div className={cls.userInfo}>
+      <VStack>
+        <HStack>
           <Skeleton borderRadius={'50%'} height={50} width={50} />
           <Skeleton height={30} width={150} />
-        </div>
+        </HStack>
         <Skeleton height={50} width={500} marginTop={10} />
-      </div>
+      </VStack>
     )
   }
 
-  if(!comment) {
+  if (!comment) {
     return null
   }
 
   return (
-    <div className={classNames(cls.CommentItem, {}, [className])}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`} className={cls.userInfo}>
-        <Avatar size={30} src={comment.user?.avatar} />
-        <Text title={comment.user?.username} size={TextSize.M} />
+    <VStack className={cls.CommentItem}>
+      <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+        <HStack gap={'8'}>
+          <Avatar size={30} src={comment.user?.avatar} />
+          <Text title={comment.user?.username} size={TextSize.M} />
+        </HStack>
       </AppLink>
       <Text text={comment.text} />
-    </div>
+    </VStack>
   );
 });

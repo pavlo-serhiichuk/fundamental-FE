@@ -7,6 +7,7 @@ import cls from './Sidebar.module.scss'
 import {SidebarItem} from 'widgets/Sidebar/ui/SidebarItem/SidebarItem'
 import {useSelector} from 'react-redux'
 import {getSidebarItems} from '../../module/selectors/getSidebarItems'
+import {VStack} from 'shared/ui/Stack/ui/VStack/VStack'
 
 interface SidebarProps {
   className?: string;
@@ -42,9 +43,9 @@ export const Sidebar: FC<SidebarProps> = memo((props) => {
       >
         {collapsed ? '>' : '<'}
       </Button>
-      <div className={cls.items}>
+      <VStack className={cls.items}>
         {itemsList}
-      </div>
+      </VStack>
       <div className={cls.switcher}>
         <LangSwitcher className={cls.lang} />
         <ThemeSwitcher />

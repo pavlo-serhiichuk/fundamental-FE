@@ -9,6 +9,7 @@ import {useSelector} from 'react-redux'
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
 import {addCommentFormActions, addCommentFormReducer} from '../../model/slice/addCommentFormSlice'
 import {DynamicModuleLoader} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import {HStack} from 'shared/ui/Stack'
 
 export interface AddCommentFormProps {
   className?: string;
@@ -36,7 +37,7 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack gap={'8'} className={classNames(cls.AddCommentForm, {}, [className])}>
         <Input
           value={text}
           className={cls.commentInput}
@@ -46,7 +47,7 @@ const AddCommentForm: FC<AddCommentFormProps> = memo((props) => {
         <Button onClick={onSendHandler}>
           {t('Send')}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   );
 });

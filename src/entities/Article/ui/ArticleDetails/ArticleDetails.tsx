@@ -23,6 +23,7 @@ import {ArticleCodeBlockComponent} from '../ArticleCodeBlockComponent/ArticleCod
 import {ArticleTextBlockComponent} from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import {ArticleImageBlockComponent} from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
+import {HStack} from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
   className?: string;
@@ -69,7 +70,9 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   if (isLoading) {
     content = (
       <>
-        <Skeleton className={cls.avatar} width={100} height={100} borderRadius={'50%'} />
+        <HStack justify={'center'} max>
+          <Skeleton className={cls.avatar} width={150} height={150} borderRadius={'50%'} />
+        </HStack>
         <Skeleton className={cls.title} width={450} height={30} />
         <Skeleton className={cls.skeleton} width={600} height={60} />
         <Skeleton className={cls.skeleton} width={500} height={60} />
@@ -85,27 +88,27 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   } else if (article) {
     content = (
       <>
-        <div className={cls.avatarWrapper}>
+        <HStack justify={'center'} max>
           <Avatar
             size={200}
             src={article?.image}
             className={cls.avatar}
           />
-        </div>
+        </HStack>
         <Text
           className={cls.title}
           title={article?.title}
           text={article?.subtitle}
           size={TextSize.L}
         />
-        <div className={cls.articleInfo}>
-          <Icon Svg={EyeIcon} className={cls.icon}/>
+        <HStack gap={'8'}>
+          <Icon Svg={EyeIcon}/>
           <Text text={String(article?.views)} />
-        </div>
-        <div className={cls.articleInfo}>
-          <Icon Svg={CalendarIcon} className={cls.icon}/>
+        </HStack>
+        <HStack gap={'8'}>
+          <Icon Svg={CalendarIcon}/>
           <Text text={article?.created} />
-        </div>
+        </HStack>
         {article?.blocks.map(renderBlock)}
       </>
     )

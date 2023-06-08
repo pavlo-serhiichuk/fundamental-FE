@@ -10,6 +10,7 @@ import {Avatar} from 'shared/ui/Avatar/Avatar'
 import {Currency, CurrencySelect} from 'entities/Currency'
 import {Country} from 'entities/Country/model/types/country'
 import {CountrySelect} from 'entities/Country'
+import {HStack, VStack} from 'shared/ui/Stack'
 
 interface ProfileCardProps {
   className?: string
@@ -72,15 +73,13 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
   }
 
   return (
-    <div className={classNames(cls.ProfileCard, mods, [className])}>
-      <div className={cls.data}>
-          <div className={cls.avatarWrapper}>
+    <VStack gap={'12'} max className={classNames(cls.ProfileCard, mods, [className])}>
+          <HStack max justify={'center'}>
             <Avatar size={150} alt="avatar" src={data?.avatar} />
-          </div>
+          </HStack>
         <Input
           value={data?.firstname}
           label={t('Your name')}
-          className={cls.input}
           onChange={onChangeFirstname}
           readonly={readonly}
         />
@@ -131,7 +130,6 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
           onChange={onChangeCountry}
           readonly={readonly}
         />
-      </div>
-    </div>
+    </VStack>
   );
 };

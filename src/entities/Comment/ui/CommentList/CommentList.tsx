@@ -1,10 +1,10 @@
 import {FC, memo} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
-import cls from './CommentList.module.scss'
 import {Comment} from '../../model/types/comment'
 import {CommentItem} from '../CommentItem/CommentItem'
 import {Text, TextSize} from 'shared/ui/Text/Text'
+import {VStack} from 'shared/ui/Stack'
 
 interface CommentListProps {
   className?: string;
@@ -19,15 +19,15 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentList, {}, [className])}>
+      <VStack className={classNames('', {}, [className])}>
         <CommentItem  isLoading />
         <CommentItem  isLoading />
-      </div>
+      </VStack>
     )
   }
 
   return (
-    <div className={classNames(cls.CommentList, {}, [className])}>
+    <VStack className={classNames('', {}, [className])}>
       {!comments.length && <Text size={TextSize.L} text={t('No comments for this article')} />}
       {comments.map(comment =>
         <CommentItem
@@ -35,6 +35,6 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
           isLoading={isLoading}
           comment={comment}
         />)}
-    </div>
+    </VStack>
   );
 });

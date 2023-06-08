@@ -1,14 +1,13 @@
 import {FC, useCallback} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
-import cls from './ProfilePageHeader.module.scss'
 import {Text} from 'shared/ui/Text/Text'
 import {Button, ButtonTheme} from 'shared/ui/Button/Button'
 import {useSelector} from 'react-redux'
 import {getProfileData, getProfileReadonly, profileActions, updateProfileData} from 'entities/Profile'
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
 import {getUserAuthData} from 'entities/User'
-import {useParams} from 'react-router-dom'
+import {HStack} from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -38,22 +37,20 @@ export const ProfilePageHeader:FC<ProfilePageHeaderProps> = (props) => {
   }, [dispatch])
 
   return (
-    <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+    <HStack max justify={'between'} className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
 
       {authData?.id === profileData?.id
         ? readonly
           ? <Button
             theme={ButtonTheme.OUTLINE}
-            className={cls.editBtn}
             onClick={onEdit}
           >
             {t('Edit')}
           </Button>
-          : <>
+          : <HStack gap={'8'}>
             <Button
               theme={ButtonTheme.OUTLINE_RED}
-              className={cls.editBtn}
               onClick={onCancelEdit}
             >
               {t('Cancel')}
@@ -64,9 +61,9 @@ export const ProfilePageHeader:FC<ProfilePageHeaderProps> = (props) => {
             >
               {t('Save')}
             </Button>
-          </>
+          </HStack>
         : null
       }
-    </div>
+    </HStack>
   );
 };
