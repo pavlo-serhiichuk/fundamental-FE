@@ -42,7 +42,7 @@ export const CountrySelect: FC<CountryProps> = memo((props) => {
       defaultValue={t('Select country')}
       label={t('Select country')}
       className={className}
-      direction={'top'}
+      direction={'top right'}
     />
   );
 })
