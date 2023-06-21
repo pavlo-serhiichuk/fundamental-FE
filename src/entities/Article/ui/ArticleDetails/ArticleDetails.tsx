@@ -27,17 +27,16 @@ import {HStack} from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
   className?: string;
-  id: string;
+  id: string | undefined;
 }
 
 export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   const {t} = useTranslation()
-  const {className, id} = props
+  const {className, id = '1'} = props
   const dispatch = useAppDispatch()
   const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)
   const error = useSelector(getArticleDetailsError)
-  console.log('article d', article)
   useInitialEffect(() => dispatch(fetchArticleById(id)))
 
   const renderBlock = useCallback((block: ArticleBlock) => {

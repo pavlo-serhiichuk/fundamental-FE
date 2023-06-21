@@ -12,7 +12,7 @@ import {useTranslation} from 'react-i18next'
 interface ArticleListProps {
   className?: string;
   articles: Article[]
-  isLoading: boolean
+  isLoading?: boolean
   view: ArticleView
   target?: HTMLAttributeAnchorTarget
 }
@@ -38,7 +38,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
     )
   }
 
-  if(!isLoading && !articles.length) {
+  if(!isLoading && !articles?.length) {
     return <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
       <Text text={t('No article with these params')} size={TextSize.L}/>
     </div>
@@ -46,7 +46,7 @@ export const ArticleList: FC<ArticleListProps> = memo((props) => {
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {articles.length
+      {articles?.length
         ? articles.map(renderArticle)
         : null}
       {isLoading && hasMore && getSkeletons(view)}

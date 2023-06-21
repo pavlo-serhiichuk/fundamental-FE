@@ -2,24 +2,20 @@ import {CounterSchema} from 'entities/Counter'
 import {UserSchema} from 'entities/User'
 import {LoginSchema} from 'features/AuthByUsername'
 import {AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject} from '@reduxjs/toolkit'
-import {ProfileSchema} from 'entities/Profile'
 import {AxiosInstance} from 'axios'
-import {NavigateOptions} from 'react-router'
 import {ArticleDetailsSchema} from 'entities/Article'
-import {
-  ArticleDetailsCommentsSchema,
-  ArticleDetailsPageRecSchema,
-  ArticleDetailsPageSchema
-} from 'pages/ArticleDetailsPage'
+import {ArticleDetailsPageSchema} from 'pages/ArticleDetailsPage'
 import {AddCommentFormSchema} from 'features/addCommentForm'
 import {ArticlesPageSchema} from 'pages/ArticlesPage'
 import {UIDetectorSchema} from 'features/UlDetector'
+import {rtkApi} from 'shared/api/rtkApi'
+import {ProfileSchema} from 'features/editableProfileCard'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
   uiDetector: UIDetectorSchema
-
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
   //async reducers
   loginForm?: LoginSchema
   profile?: ProfileSchema
