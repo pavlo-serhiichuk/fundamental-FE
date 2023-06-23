@@ -18,7 +18,6 @@ export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<st
       if(!response.data) {
         throw new Error()
       }
-      console.log(1, response.data)
       return response.data
     } catch (e) {
       return rejectWithValue('Wrong username or password')

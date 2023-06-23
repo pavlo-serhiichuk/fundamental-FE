@@ -11,6 +11,45 @@ export default {
     __API__: '',
     __PROJECT__: 'jest',
   },
+  clearMocks: true,
+  testEnvironment: 'jsdom',
+  coveragePathIgnorePatterns: [
+    '/node_modules/'
+  ],
+  moduleDirectories: [
+    'node_modules',
+    'src'
+  ],
+  'modulePaths': [
+    `<rootDir>src`
+  ],
+  moduleFileExtensions: [
+    'js',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
+  ],
+  rootDir: '../../',
+  testMatch: [
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
+  ],
+  setupFilesAfterEnv: [`<rootDir>/config/jest/setupTests.ts`],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    'axios': 'axios/dist/node/axios.cjs'
+  },
+  "reporters": [
+    "default",
+    ["jest-html-reporters", {
+      "publicPath": "<rootDir>/reports/unit",
+      "filename": "report.html",
+      "openReport": true,
+      inlineSource: true
+    }]
+  ],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -21,37 +60,6 @@ export default {
   // cacheDirectory: "/private/var/folders/73/lhq5sbh12lg4mwlggtyb295m0000gn/T/jest_dx",
 
   // Automatically clear mock calls, instances and results before every test
-  clearMocks: true,
-  testEnvironment: "jsdom",
-  coveragePathIgnorePatterns: [
-    "/node_modules/"
-  ],
-  moduleDirectories: [
-    "node_modules",
-    "src"
-  ],
-  "modulePaths": [
-    `<rootDir>src`
-  ],
-  moduleFileExtensions: [
-    "js",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
-  ],
-  rootDir: '../../',
-  testMatch: [
-    "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)"
-  ],
-  setupFilesAfterEnv: [`<rootDir>/config/jest/setupTests.ts`],
-  moduleNameMapper: {
-    '\\.s?css$': 'identity-obj-proxy',
-    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
-    "axios": "axios/dist/node/axios.cjs"
-  },
-
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 
