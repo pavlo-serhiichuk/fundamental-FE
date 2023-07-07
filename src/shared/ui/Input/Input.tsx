@@ -51,6 +51,7 @@ export const Input:FC<InputProps> = memo((props) => {
         {`${label}:`}&nbsp;
       </div>}
       <input
+        {...otherProps}
         className={className}
         ref={ref}
         type={type}

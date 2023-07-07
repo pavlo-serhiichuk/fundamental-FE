@@ -5,11 +5,11 @@ import {userEvent} from '@storybook/testing-library'
 
 describe('Counter', () => {
   test('test toggle', () => {
-    // componentRender(<Counter />, {
-    //   initialState: {counter: {value: 10}}
-    // })
-    //
-    // expect(screen.getByTestId('value-title')).toHaveTextContent('10')
+    componentRender(<Counter />, {
+      initialState: {counter: {value: 10}}
+    })
+
+    expect(screen.getByTestId('value-title')).toHaveTextContent('10')
   })
   //
   // test('increment', () => {
