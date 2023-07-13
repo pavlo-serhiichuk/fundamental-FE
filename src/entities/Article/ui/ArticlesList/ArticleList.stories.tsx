@@ -1,9 +1,10 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {ArticleList} from './ArticleList';
-import {Article, ArticleView} from '../../model/types/article'
+import {Article} from '../../model/types/article'
 import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import {Primary} from 'pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.stories'
+import {ArticleView} from 'entities/Article/model/consts/consts'
 
 const article: Article = {
   "id": "1",

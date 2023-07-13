@@ -1,5 +1,5 @@
 export { EditableProfileCard } from './ui/EditableProfileCard/EditableProfileCard';
-export { ProfileSchema } from './model/types/editableProfileCardSchema';
+export type { ProfileSchema } from './model/types/editableProfileCardSchema';
 
 export {
   profileActions,
@@ -15,4 +15,4 @@ export {getProfileIsLoading} from './model/selectors/getProfileIsLoading/getProf
 export {getProfileReadonly} from './model/selectors/getProfileReadonly/getProfileReadonly'
 export {getProfileForm} from './model/selectors/getProfileForm/getProfileForm'
 export {getProfileValidateErrors} from './model/selectors/getProfileValidateErrors/getProfileValidateErrors'
-export {ValidateProfileError} from 'features/editableProfileCard/model/types/editableProfileCardSchema'
+export {ValidateProfileError} from './model/consts/consts'

@@ -7,7 +7,7 @@ import {ArticlesPage} from 'pages/ArticlesPage'
 import {ArticleDetailsPage} from 'pages/ArticleDetailsPage'
 import {ArticleEditPage} from 'pages/ArticleEditPage'
 import {AdminPage} from 'pages/AdminPage'
-import {UserRole} from 'entities/User/model/types/userSchema'
+import {UserRole} from 'entities/User'
 import {ForbiddenPage} from 'pages/ForbiddenPage'
 
 export type AppRouteProps = RouteProps & {

@@ -1,5 +1,5 @@
 node_modules
-idea
+/idea
 /build
 /.idea/fundamental_FE.iml
 /.idea/modules.xml

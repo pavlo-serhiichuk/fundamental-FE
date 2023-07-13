@@ -11,7 +11,6 @@ import {getProfileForm} from '../../model/selectors/getProfileForm/getProfileFor
 import {getProfileReadonly} from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import {getProfileError} from '../../model/selectors/getProfileError/getProfileError'
 import {fetchProfileData} from '../../model/services/fetchProfileData/fetchProfileData'
-import {ValidateProfileError} from '../../model/types/editableProfileCardSchema'
 import {
   getProfileValidateErrors
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
@@ -22,6 +21,7 @@ import {
   EditableProfileCardHeader
 } from 'features/editableProfileCard/ui/EditableProfileCardHeader/EditableProfileCardHeader'
 import {VStack} from 'shared/ui/Stack'
+import {ValidateProfileError} from '../../model/consts/consts'
 
 interface EditableProfileCardProps {
   className?: string;
