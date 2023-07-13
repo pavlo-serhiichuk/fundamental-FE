@@ -1,8 +1,7 @@
 import {FC, memo} from 'react'
-import {useTranslation} from 'react-i18next'
 import {useSelector} from 'react-redux'
-import {getArticles} from 'pages/ArticlesPage/model/slices/articlesPageSlice'
-import {getArticlesListError, getArticlesListIsLoading, getArticlesPageView} from 'pages/ArticlesPage'
+import {getArticles} from '../../model/slices/articlesPageSlice'
+import {getArticlesListError, getArticlesListIsLoading, getArticlesPageView} from '../../model/selectors/getArticlesListSelectors'
 import {ArticleList} from 'entities/Article'
 
 interface ArticleInfiniteListProps {

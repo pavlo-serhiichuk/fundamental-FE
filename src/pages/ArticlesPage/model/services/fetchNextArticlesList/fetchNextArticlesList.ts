@@ -1,13 +1,12 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {ThunkConfig} from 'app/providers/StoreProvider'
-
 import {
   getArticlesListIsLoading,
   getArticlesPageHasMore,
   getArticlesPageNum
-} from 'pages/ArticlesPage/model/selectors/getArticlesListSelectors'
-import {fetchArticlesList} from 'pages/ArticlesPage/model/services/fetchArticlesList'
-import {articlesPageActions} from 'pages/ArticlesPage/model/slices/articlesPageSlice'
+} from '../../selectors/getArticlesListSelectors'
+import {fetchArticlesList} from '../../services/fetchArticlesList'
+import {articlesPageActions} from '../../slices/articlesPageSlice'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const fetchNextArticlesList = createAsyncThunk<void, void, ThunkConfig<string>>(

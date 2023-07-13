@@ -19,7 +19,7 @@ import {DynamicModuleLoader, ReducersList} from 'shared/lib/components/DynamicMo
 import {profileActions, profileReducer} from '../../model/slice/profileSlice'
 import {
   EditableProfileCardHeader
-} from 'features/editableProfileCard/ui/EditableProfileCardHeader/EditableProfileCardHeader'
+} from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import {VStack} from 'shared/ui/Stack'
 import {ValidateProfileError} from '../../model/consts/consts'
 

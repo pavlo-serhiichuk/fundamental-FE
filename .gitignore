@@ -1,15 +1,10 @@
 node_modules
-/idea
+/.idea
 /build
-/.idea/fundamental_FE.iml
-/.idea/modules.xml
 /package-lock.json
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/vcs.xml
 /storybook-static
 /extractedTranslations
 /extractedTranslations/en/translation.json
 .loki/report.json
 .loki/report.html
-/.idea/webResources.xml
 /reports

@@ -1,4 +1,4 @@
-import {FC, memo, useCallback, useEffect} from 'react'
+import {FC, memo, useCallback} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './ArticleDetails.module.scss'

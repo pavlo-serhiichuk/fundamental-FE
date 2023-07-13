@@ -1,12 +1,11 @@
 import {createAsyncThunk} from '@reduxjs/toolkit'
 import {ThunkConfig} from 'app/providers/StoreProvider'
 
-import {getArticlesPage_Inited} from 'pages/ArticlesPage/model/selectors/getArticlesListSelectors'
-import {fetchArticlesList} from 'pages/ArticlesPage/model/services/fetchArticlesList'
-import {articlesPageActions} from 'pages/ArticlesPage/model/slices/articlesPageSlice'
+import {getArticlesPage_Inited} from '../../selectors/getArticlesListSelectors'
+import {fetchArticlesList} from '../../services/fetchArticlesList'
+import {articlesPageActions} from '../../slices/articlesPageSlice'
 import {SortOrder} from 'shared/types'
-import {ArticleSortField} from 'entities/Article'
-import {ArticleType} from 'entities/Article/model/consts/consts'
+import {ArticleSortField, ArticleType} from 'entities/Article'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(

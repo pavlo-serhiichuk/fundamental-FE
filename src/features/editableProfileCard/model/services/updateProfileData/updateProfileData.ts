@@ -3,7 +3,8 @@ import {ThunkConfig} from 'app/providers/StoreProvider'
 import { Profile} from 'entities/Profile'
 import {getProfileForm} from '../../selectors/getProfileForm/getProfileForm'
 import {validateProfileData} from '../validateProfileData/validateProfileData'
-import {getProfileData, ValidateProfileError} from 'features/editableProfileCard'
+import {getProfileData} from '../../selectors/getProfileData/getProfileData'
+import {ValidateProfileError} from '../../consts/consts'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const updateProfileData = createAsyncThunk<Profile, void, ThunkConfig<ValidateProfileError[]>>(
