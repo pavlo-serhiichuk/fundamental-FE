@@ -244,21 +244,7 @@
       <workItem from="1688886942546" duration="5000" />
       <workItem from="1688886958224" duration="3432000" />
       <workItem from="1688972079642" duration="25000" />
-      <workItem from="1688972113752" duration="11441000" />
-    </task>
-    <task id="LOCAL-00068" summary="47 lesson. added private protected routes">
-      <created>1681931102703</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1681931102704</updated>
-    </task>
-    <task id="LOCAL-00069" summary="48 lesson. added ArticlesPage and ArticleDetailsPage">
-      <created>1682138013577</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1682138013578</updated>
+      <workItem from="1688972113752" duration="11907000" />
     </task>
     <task id="LOCAL-00070" summary="48 lesson. add mininum commands for main.yml">
       <created>1682139111534</created>
@@ -589,7 +575,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689216501324</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="check">
+      <created>1689216717633</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1689216717633</updated>
+    </task>
+    <task id="LOCAL-00118" summary="check 2">
+      <created>1689216920760</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1689216920761</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,8 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="60 lesson. added recommendations for opened article" />
-    <MESSAGE value="added ArticleDetailsPageHeader, createArticle and editArticle navigation" />
     <MESSAGE value="production" />
     <MESSAGE value="fix storybook config" />
     <MESSAGE value="changed apiUrl for prod" />
@@ -636,7 +634,9 @@
     <MESSAGE value="migration to 18 react. added stories for several files" />
     <MESSAGE value="fixed arrticles request from ArticleDetailsPage.tsx" />
     <MESSAGE value="extra picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra picture" />
+    <MESSAGE value="check" />
+    <MESSAGE value="check 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="check 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
