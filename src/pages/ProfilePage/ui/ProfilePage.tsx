@@ -11,11 +11,6 @@ interface ProfileProps {
 
 const ProfilePage: FC<ProfileProps> = () => {
   const {id} = useParams<{ id: string }>()
-  const {t} = useTranslation()
-
-  if (!id) {
-    return <Text text={t('No id')} />
-  }
 
   return (
     <Page>

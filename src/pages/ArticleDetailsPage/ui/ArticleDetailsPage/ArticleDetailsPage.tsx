@@ -26,7 +26,6 @@ const reducers: ReducersList = {
 }
 
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
-  const {t} = useTranslation()
   const {className} = props
   const {id} = useParams<{id: string}>()
   const dispatch = useAppDispatch()
@@ -35,7 +34,6 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecList())
   })
-
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>

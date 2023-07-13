@@ -27,12 +27,12 @@ import {HStack} from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
   className?: string;
-  id: string | undefined;
+  id?: string | undefined;
 }
 
 export const ArticleDetails: FC<ArticleDetailsProps> = memo((props) => {
   const {t} = useTranslation()
-  const {className, id = '1'} = props
+  const {className, id} = props
   const dispatch = useAppDispatch()
   const article = useSelector(getArticleDetailsData)
   const isLoading = useSelector(getArticleDetailsIsLoading)

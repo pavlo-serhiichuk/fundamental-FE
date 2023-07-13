@@ -49,9 +49,10 @@ export const ProfileCard: FC<ProfileCardProps> = (props) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.ProfileCard, {[cls.loading]: true}, [className])}>
+      <VStack gap={'12'} max
+        className={classNames(cls.ProfileCard, {[cls.loading]: true}, [className])}>
         <Loader />
-      </div>
+      </VStack>
     )
   }
 

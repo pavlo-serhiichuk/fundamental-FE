@@ -79,7 +79,7 @@ const article: Article =
 
 
 export default {
-  title: 'entities/ArticleDetails',
+  title: 'entities/Article/ArticleDetails',
   component: ArticleDetails,
   argTypes: {
     backgroundColor: {control: 'color'},
@@ -91,7 +91,9 @@ const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetail
 
 export const Primary = Template.bind({});
 
-Primary.args = {};
+Primary.args = {
+
+};
 Primary.decorators = [StoreDecorator({
   articleDetails: {
     data: article

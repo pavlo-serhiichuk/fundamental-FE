@@ -1,4 +1,4 @@
-import {FC, useCallback} from 'react'
+import {FC, useCallback, Suspense} from 'react'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import {memo} from 'react'
@@ -11,6 +11,7 @@ import {getArticleComments} from 'pages/ArticleDetailsPage/model/slices/ArticleD
 import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
 import {Text} from 'shared/ui/Text/Text'
 import {getArticleCommentsIsLoading} from 'pages/ArticleDetailsPage/model/selectors/comments'
+import {Loader} from 'shared/ui/Loader/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string;
@@ -27,18 +28,13 @@ export const ArticleDetailsComments: FC<ArticleDetailsCommentsProps> = memo((pro
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
   }, [dispatch])
-  if(!id) {
-    return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        {t('Article wasn\'t found')}
-      </div>
-    )
-  }
 
   return (
     <div className={classNames('', {}, [className])}>
       <Text className={cls.commentsTitle} title={t('Comments')} />
-      <AddCommentForm onSendComment={onSendComment} />
+      <Suspense fallback={<Loader />}>
+        <AddCommentForm onSendComment={onSendComment} />
+      </Suspense>
       <CommentList
         isLoading={isLoading}
         comments={comments}
