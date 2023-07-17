@@ -6,7 +6,8 @@ import {buildBabelLoader} from './loaders/buildBabelLoader'
 //для конфігурації файлів які виходять за рамки js
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
-  const babelLoader = buildBabelLoader(options)
+  const codeBabelLoader = buildBabelLoader({...options, isTsx: false})
+  const tsxCodeBabelLoader = buildBabelLoader({...options, isTsx: true})
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2)$/i,
@@ -25,17 +26,19 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const cssLoader = buildCssLoader(options.isDev)
 
   //If we use ts we don't need babel-loader
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-  }
+  // const typescriptLoader = {
+  //   test: /\.tsx?$/,
+  //   use: 'ts-loader',
+  //   exclude: /node_modules/,
+  // }
 
   return [
     fileLoader,
     svgLoader,
-    babelLoader,
-    typescriptLoader,
+    codeBabelLoader,
+    tsxCodeBabelLoader,
+    // babelLoader,
+    // typescriptLoader,
     cssLoader
   ]
 }

@@ -9,6 +9,8 @@ import {StoreProvider} from 'app/providers/StoreProvider'
 
 const container = document.getElementById('root');
 
+if(!container) throw new Error('NEW ERROR!!')
+
 const root = createRoot(container!);
 
 root.render(
