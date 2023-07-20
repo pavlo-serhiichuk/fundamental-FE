@@ -1,10 +1,12 @@
 import {ReactNode} from 'react'
 import {Listbox as HListBox} from '@headlessui/react'
 import cls from './ListBox.module.scss'
+import popupsCls from '../../styles/popups.module.scss'
 import {classNames} from 'shared/lib/classNames/classNames'
 import {Button} from 'shared/ui/Button/Button'
 import {HStack} from 'shared/ui/Stack'
 import {DropdownDirection} from 'shared/types/ui'
+import {mapDirectionClass} from '../../styles/consts'
 
 export interface ListBoxItem {
   value: string
@@ -23,13 +25,6 @@ interface ListBoxProps {
   label?: string
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  'top left': cls.optionsTopLeft,
-  'top right': cls.optionsTopRight,
-  'bottom left': cls.optionsBottomLeft,
-  'bottom right': cls.optionsBottomRight,
-}
-
 export function ListBox(props: ListBoxProps) {
   const {
     items,
@@ -38,7 +33,7 @@ export function ListBox(props: ListBoxProps) {
     defaultValue,
     onChange,
     readonly,
-    direction = 'bottom right',
+    direction = 'bottom left',
     label
   } = props
 
@@ -67,7 +62,7 @@ export function ListBox(props: ListBoxProps) {
             >
               {({active, selected}) => (
                 <li
-                  className={classNames(cls.item, {[cls.active]: active || selected, [cls.disabled]: item.disabled})}
+                  className={classNames(cls.item, {[popupsCls.active]: active || selected, [popupsCls.disabled]: item.disabled})}
                 >
                   {item.content}
                   {selected && '💡'}

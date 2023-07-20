@@ -441,6 +441,34 @@
       ]
     }
   ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification 1. From Anna",
+      "description": "Description for notification 1. The longest one",
+      "userId": "1"
+    },{
+      "id": "2",
+      "title": "Notification 2. From Anna",
+      "description": "Description for notification 2.",
+      "userId": "1"
+    },{
+      "id": "3",
+      "title": "Notification 3. From Anna",
+      "description": "Description for notification 3.",
+      "userId": "1"
+    },{
+      "id": "4",
+      "title": "Notification 4. From Anna",
+      "description": "Description for notification 4.",
+      "userId": "1"
+    },{
+      "id": "5",
+      "title": "Notification 5. From Anna",
+      "description": "Description for notification 5.",
+      "userId": "1"
+    }
+  ],
   "posts": [
     {
       "id": "1",
