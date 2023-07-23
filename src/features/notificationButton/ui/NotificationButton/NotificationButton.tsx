@@ -8,6 +8,7 @@ import {NotificationList} from 'entities/Notification'
 import {Popover} from 'shared/ui/Popups'
 import {Drawer} from 'shared/ui/Drawer/Drawer'
 import {BrowserView, MobileView} from 'react-device-detect'
+import {AnimationProvider} from 'shared/lib/components/AnimationProvider'
 
 export const NotificationButton: FC = memo((props) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,9 +29,11 @@ export const NotificationButton: FC = memo((props) => {
       </BrowserView>
       <MobileView>
         {trigger}
-        <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          <NotificationList />
-        </Drawer>
+        <AnimationProvider>
+          <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+            <NotificationList />
+          </Drawer>
+        </AnimationProvider>
       </MobileView>
 
     </div>
