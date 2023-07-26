@@ -1,10 +1,10 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import {ProfileCard} from './ProfileCard'
-import {Country} from 'entities/Country'
-import {Currency} from 'entities/Currency'
-import avatar from 'shared/assets/test/programmer.jpeg'
+import {Country} from '@/entities/Country'
+import {Currency} from '@/entities/Currency'
+import avatar from '@/shared/assets/test/programmer.jpeg'
 
 export default {
   title: 'entities/ProfileCard',

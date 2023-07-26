@@ -1,12 +1,12 @@
 import {useTranslation} from 'react-i18next';
 import {memo, useCallback} from 'react';
-import {Currency} from 'entities/Currency'
-import {Country} from 'entities/Country'
-import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
+import {Currency} from '@/entities/Currency'
+import {Country} from '@/entities/Country'
+import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {useSelector} from 'react-redux'
-import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
-import {Text, TextTheme} from 'shared/ui/Text/Text'
-import {ProfileCard} from 'entities/Profile'
+import {useInitialEffect} from '@/shared/lib/hooks/useInitialEffect'
+import {Text, TextTheme} from '@/shared/ui/Text/Text'
+import {ProfileCard} from '@/entities/Profile'
 import {getProfileForm} from '../../model/selectors/getProfileForm/getProfileForm'
 import {getProfileReadonly} from '../../model/selectors/getProfileReadonly/getProfileReadonly'
 import {getProfileError} from '../../model/selectors/getProfileError/getProfileError'
@@ -15,12 +15,12 @@ import {
   getProfileValidateErrors
 } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors'
 import {getProfileIsLoading} from '../../model/selectors/getProfileIsLoading/getProfileIsLoading'
-import {DynamicModuleLoader, ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import {DynamicModuleLoader, ReducersList} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import {profileActions, profileReducer} from '../../model/slice/profileSlice'
 import {
   EditableProfileCardHeader
 } from '../EditableProfileCardHeader/EditableProfileCardHeader'
-import {VStack} from 'shared/ui/Stack'
+import {VStack} from '@/shared/ui/Stack'
 import {ValidateProfileError} from '../../model/consts/consts'
 
 interface EditableProfileCardProps {

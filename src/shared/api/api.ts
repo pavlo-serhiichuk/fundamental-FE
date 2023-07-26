@@ -1,4 +1,4 @@
-import {USER_LOCALSTORAGE} from 'shared/consts/localStorage'
+import {USER_LOCALSTORAGE} from '@/shared/consts/localStorage'
 import axios from 'axios'
 
 // const baseURL = __IS_DEV__ ? "http://localhost:8000": "https://production.ua"

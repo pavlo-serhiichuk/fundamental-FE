@@ -1,5 +1,5 @@
 import React, {FC, ReactNode} from 'react'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {classNames} from '@/shared/lib/classNames/classNames'
 import cls from './Flex.module.scss'
 
 export type FlexJustify = 'start' | 'end' | 'between' | 'center'

@@ -1,5 +1,5 @@
 import {EntityState} from '@reduxjs/toolkit'
-import {Comment} from 'entities/Comment'
+import {Comment} from '@/entities/Comment'
 import {ArticleDetailsCommentsSchema} from './ArticleDetailsCommentsSchema'
 import {ArticleDetailsPageRecSchema} from './ArticleDetailsPageRecSchema'
 

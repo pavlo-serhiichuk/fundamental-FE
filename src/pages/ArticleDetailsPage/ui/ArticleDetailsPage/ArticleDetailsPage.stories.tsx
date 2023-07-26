@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import ArticleDetailsPage from './ArticleDetailsPage';
-import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import withMock from 'storybook-addon-mock'
 
 const mockArticle = {

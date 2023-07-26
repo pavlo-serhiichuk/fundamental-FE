@@ -1,21 +1,21 @@
 import {FC, memo} from 'react'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {classNames} from '@/shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './ArticleDetailsPage.module.scss'
-import {ArticleDetails} from 'entities/Article'
+import {ArticleDetails} from '@/entities/Article'
 import {useParams} from 'react-router-dom'
-import {DynamicModuleLoader, ReducersList} from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import {useInitialEffect} from 'shared/lib/hooks/useInitialEffect'
-import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
+import {DynamicModuleLoader, ReducersList} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
+import {useInitialEffect} from '@/shared/lib/hooks/useInitialEffect'
+import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {
   fetchCommentsByArticleId
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import {Page} from 'shared/ui/Page/Page'
-import {fetchArticleRecList} from 'pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
-import {articleDetailsPageReducer} from 'pages/ArticleDetailsPage/model/slices'
-import {ArticleDetailsPageHeader} from 'pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
-import {ArticleRecommendationsList} from 'features/articleRecommendationsList'
-import {ArticleDetailsComments} from 'pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
+} from '@/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
+import {Page} from '@/shared/ui/Page/Page'
+import {fetchArticleRecList} from '@/pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
+import {articleDetailsPageReducer} from '@/pages/ArticleDetailsPage/model/slices'
+import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+import {ArticleRecommendationsList} from '@/features/articleRecommendationsList'
+import {ArticleDetailsComments} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
 
 interface ArticleDetailsPageProps {
   className?: string;

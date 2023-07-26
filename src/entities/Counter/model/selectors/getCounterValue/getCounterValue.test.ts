@@ -1,6 +1,6 @@
 import {getCounterValue} from './getCounterValue'
 import {DeepPartial} from '@reduxjs/toolkit'
-import {StateSchema} from 'app/providers/StoreProvider'
+import {StateSchema} from '@/app/providers/StoreProvider'
 
 describe('getCounterValue.test', () => {
   test('return final number', () => {

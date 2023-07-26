@@ -1,12 +1,12 @@
 import {FC, memo} from 'react'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {classNames} from '@/shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './ArticleViewSelector.module.scss'
 import {ArticleView} from '../../model/consts/consts'
-import ListIcon from 'shared/assets/icons/list.svg'
-import TileIcon from 'shared/assets/icons/tile.svg'
-import {Button, ButtonTheme} from 'shared/ui/Button/Button'
-import {Icon} from 'shared/ui/Icon/Icon'
+import ListIcon from '@/shared/assets/icons/list.svg'
+import TileIcon from '@/shared/assets/icons/tile.svg'
+import {Button, ButtonTheme} from '@/shared/ui/Button/Button'
+import {Icon} from '@/shared/ui/Icon/Icon'
 
 interface ArticleViewSelectorProps {
   className?: string;

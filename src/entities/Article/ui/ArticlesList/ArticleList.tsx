@@ -1,14 +1,14 @@
 import {FC, HTMLAttributeAnchorTarget, memo} from 'react'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {classNames} from '@/shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
 import {Article} from '../../model/types/article'
 import {ArticleView} from '../../model/consts/consts'
 import {ArticleItem} from '../ArticleItem/ArticleItem'
 import {ArticleItemSkeleton} from '../ArticleItem/ArticleListItemSkeleton'
 import {useSelector} from 'react-redux'
-import {Text, TextSize} from 'shared/ui/Text/Text'
+import {Text, TextSize} from '@/shared/ui/Text/Text'
 import {useTranslation} from 'react-i18next'
-import {getArticlesPageHasMore} from 'pages/ArticlesPage'
+import {getArticlesPageHasMore} from '@/pages/ArticlesPage'
 
 interface ArticleListProps {
   className?: string;

@@ -1,7 +1,7 @@
 import {profileActions, profileReducer} from './profileSlice'
-import {Country} from 'entities/Country'
-import {Currency} from 'entities/Currency'
-import {ProfileSchema, updateProfileData, ValidateProfileError} from 'features/editableProfileCard'
+import {Country} from '@/entities/Country'
+import {Currency} from '@/entities/Currency'
+import {ProfileSchema, updateProfileData, ValidateProfileError} from '@/features/editableProfileCard'
 
 const data = {
   username: 'admin',

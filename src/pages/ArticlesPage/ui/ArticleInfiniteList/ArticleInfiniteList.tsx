@@ -2,7 +2,7 @@ import {FC, memo} from 'react'
 import {useSelector} from 'react-redux'
 import {getArticles} from '../../model/slices/articlesPageSlice'
 import {getArticlesListError, getArticlesListIsLoading, getArticlesPageView} from '../../model/selectors/getArticlesListSelectors'
-import {ArticleList} from 'entities/Article'
+import {ArticleList} from '@/entities/Article'
 
 interface ArticleInfiniteListProps {
   className?: string;

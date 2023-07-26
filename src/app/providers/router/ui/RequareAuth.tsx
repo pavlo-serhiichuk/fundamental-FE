@@ -1,9 +1,9 @@
 import {Navigate, useLocation} from 'react-router-dom'
-import {RoutePath} from 'shared/config/routeConfig/routeConfig'
+import {RoutePath} from '@/shared/config/routeConfig/routeConfig'
 import {useSelector} from 'react-redux'
-import {getUserAuthData, getUserRoles} from 'entities/User'
+import {getUserAuthData, getUserRoles} from '@/entities/User'
 import {useMemo} from 'react'
-import {UserRole} from 'entities/User'
+import {UserRole} from '@/entities/User'
 
 interface RequareAuthProps {
   children: JSX.Element

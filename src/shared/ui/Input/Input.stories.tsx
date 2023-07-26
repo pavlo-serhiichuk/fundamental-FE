@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import {Input} from './Input'
 
 export default {

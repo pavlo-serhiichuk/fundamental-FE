@@ -1,5 +1,5 @@
 import {FC, memo, useCallback} from 'react'
-import {classNames} from 'shared/lib/classNames/classNames'
+import {classNames} from '@/shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './ArticlePageFilters.module.scss'
 import {
@@ -9,21 +9,21 @@ import {
   ArticleSortField,
   ArticleSortSelector,
   ArticleViewSelector
-} from 'entities/Article'
+} from '@/entities/Article'
 import {articlesPageActions} from '../../model/slices/articlesPageSlice'
-import {useAppDispatch} from 'shared/lib/hooks/useAppDispatch'
+import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {useSelector} from 'react-redux'
-import {Card} from 'shared/ui/Card/Card'
-import {Input} from 'shared/ui/Input/Input'
+import {Card} from '@/shared/ui/Card/Card'
+import {Input} from '@/shared/ui/Input/Input'
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
   getArticlesPageSort,
   getArticlesPageView
 } from '../../model/selectors/getArticlesListSelectors'
-import {SortOrder} from 'shared/types'
+import {SortOrder} from '@/shared/types'
 import {fetchArticlesList} from '../../model/services/fetchArticlesList'
-import {useDebounce} from 'shared/lib/hooks/useDebounce'
+import {useDebounce} from '@/shared/lib/hooks/useDebounce'
 import {getArticlesPageType} from '../../model/selectors/getArticlesListSelectors'
 
 interface ArticlePageFiltersProps {

@@ -2,13 +2,13 @@ import {
   createEntityAdapter,
   createSlice, PayloadAction,
 } from '@reduxjs/toolkit'
-import {Comment} from 'entities/Comment'
-import {StateSchema} from 'app/providers/StoreProvider'
-import {ArticleDetailsCommentsSchema} from 'pages/ArticleDetailsPage'
+import {Comment} from '@/entities/Comment'
+import {StateSchema} from '@/app/providers/StoreProvider'
+import {ArticleDetailsCommentsSchema} from '@/pages/ArticleDetailsPage'
 import {fetchCommentsByArticleId} from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import {ArticleDetailsPageRecSchema} from 'pages/ArticleDetailsPage/model/types/ArticleDetailsPageRecSchema'
-import {Article} from 'entities/Article'
-import {fetchArticleRecList} from 'pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
+import {ArticleDetailsPageRecSchema} from '@/pages/ArticleDetailsPage/model/types/ArticleDetailsPageRecSchema'
+import {Article} from '@/entities/Article'
+import {fetchArticleRecList} from '@/pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
 
 const recommendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id

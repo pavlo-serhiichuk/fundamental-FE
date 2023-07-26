@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {CurrencySelect} from 'entities/Currency'
+import {CurrencySelect} from '@/entities/Currency'
 
 export default {
   title: 'entities/CurrencySelect',

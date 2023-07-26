@@ -1,9 +1,9 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import 'app/styles/index.scss'
+import '@/app/styles/index.scss'
 import {Text, TextSize, TextTheme} from './Text'
-import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import {Theme} from 'app/providers/ThemeProvider'
+import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import {Theme} from '@/app/providers/ThemeProvider'
 
 export default {
   title: 'shared/Text',

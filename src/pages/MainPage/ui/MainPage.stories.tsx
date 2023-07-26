@@ -1,11 +1,11 @@
 import React, {Suspense} from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import 'app/styles/index.scss'
-import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import {Theme} from 'app/providers/ThemeProvider'
-import {MainPage} from 'pages/MainPage'
-import {StoreDecorator} from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import '@/app/styles/index.scss'
+import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import {Theme} from '@/app/providers/ThemeProvider'
+import {MainPage} from '@/pages/MainPage'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'pages/MainPage',

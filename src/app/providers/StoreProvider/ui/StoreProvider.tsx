@@ -1,7 +1,7 @@
 import {Provider} from 'react-redux'
 import {FC, ReactNode} from 'react'
-import {createReduxStore} from 'app/providers/StoreProvider/config/createReduxStore'
-import {StateSchema} from 'app/providers/StoreProvider/config/StateSchema'
+import {createReduxStore} from '@/app/providers/StoreProvider/config/createReduxStore'
+import {StateSchema} from '@/app/providers/StoreProvider/config/StateSchema'
 import { ReducersMapObject} from '@reduxjs/toolkit'
 
 interface StoreProviderProps {
