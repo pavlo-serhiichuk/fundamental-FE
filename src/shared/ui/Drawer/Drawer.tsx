@@ -5,7 +5,7 @@ import {useTheme} from '@/app/providers/ThemeProvider'
 import {Portal} from '@/shared/ui/Portal/Portal'
 import {Overlay} from '@/shared/ui/Overlay/Overlay'
 import {useModal} from '@/shared/lib/hooks/useModal'
-import {useAnimationLibs} from '@/shared/lib/components/AnimationProvider'
+import {AnimationProvider, useAnimationLibs} from '@/shared/lib/components/AnimationProvider'
 
 interface DrawerProps {
   className?: string;
@@ -36,8 +36,7 @@ const DrawerContent: FC<DrawerProps> = memo((props) => {
   const closeDrawer = (velocity = 0) => {
     api.start({y: height, immediate: false, config: {...Spring.config.stiff, velocity}, onResolve: onClose})
   }
-
-
+  console.log('isOpen', isOpen)
   const bind = Gesture.useDrag(
     ({
        last,
@@ -86,14 +85,21 @@ const DrawerContent: FC<DrawerProps> = memo((props) => {
   );
 });
 
-export const Drawer = (props: DrawerProps) => {
-  const {isLoaded} = useAnimationLibs()
+
+const DrawerAsync = (props: DrawerProps) => {
+  const { isLoaded } = useAnimationLibs();
 
   if (!isLoaded) {
-    return null
+    return null;
   }
 
+  return <DrawerContent {...props} />;
+};
+
+export const Drawer = (props: DrawerProps) => {
   return (
-    <DrawerContent {...props}/>
-  )
-}
+    <AnimationProvider>
+      <DrawerAsync {...props} />
+    </AnimationProvider>
+  );
+};

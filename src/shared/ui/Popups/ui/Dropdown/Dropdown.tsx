@@ -28,7 +28,7 @@ export function Dropdown(props: DropdownProps) {
       as={'div'}
       className={classNames(cls.Dropdown, {}, [className, popupsCls.popup])}
     >
-      <Menu.Button className={popupsCls.trigger}>
+      <Menu.Button as={'div'} className={popupsCls.trigger}>
         {trigger}
       </Menu.Button>
       <Menu.Items className={classNames(cls.menu, {}, [mapDirectionClass[direction]])}>

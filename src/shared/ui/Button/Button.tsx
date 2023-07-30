@@ -23,6 +23,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   square?: boolean;
   size?: string;
   disabled?: boolean
+  fullWidth?: boolean
 }
 
 export const Button = memo((props: ButtonProps) => {
@@ -33,6 +34,7 @@ export const Button = memo((props: ButtonProps) => {
     square,
     size = ButtonSize.M,
     disabled = false,
+    fullWidth,
     ...other
   } = props
 
@@ -40,7 +42,8 @@ export const Button = memo((props: ButtonProps) => {
     [cls[theme]]: true, //takes value of ButtonTheme enum and use it as a class
     [cls.square]: square,
     [cls[size]]: true,
-    [cls.disabled]: disabled
+    [cls.disabled]: disabled,
+    [cls.fullWidth]: fullWidth
   }
 
   return (

@@ -23,7 +23,7 @@ export const Popover: FC<PopoverProps> = memo((props) => {
 
   return (
     <HPopover className={classNames(cls.Popover, {}, [className, popupsCls.popup])}>
-      <HPopover.Button className={popupsCls.trigger}>
+      <HPopover.Button as={'div'} className={popupsCls.trigger}>
         {trigger}
       </HPopover.Button>
       <HPopover.Panel className={classNames(cls.panel, {}, menuClasses)}>
