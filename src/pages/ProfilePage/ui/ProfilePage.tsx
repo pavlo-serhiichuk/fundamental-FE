@@ -2,7 +2,7 @@ import {FC} from 'react'
 import {Page} from '@/shared/ui/Page/Page'
 import {EditableProfileCard} from '@/features/editableProfileCard'
 import {useParams} from 'react-router-dom'
-import {ProfileRating} from '@/features/profileRating/ui/ProfileRating/ProfileRating'
+import {ProfileRating} from '@/features/profileRating'
 
 interface ProfileProps {
   className?: string;

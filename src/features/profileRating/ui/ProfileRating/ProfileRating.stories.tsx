@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
-import {ProfileRating} from './ProfileRating';
+import ProfileRating from './ProfileRating';
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import withMock from 'storybook-addon-mock'
 

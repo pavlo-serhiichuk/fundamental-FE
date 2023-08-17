@@ -5,14 +5,13 @@ import {Skeleton} from '@/shared/ui/Skeleton/Skeleton'
 import {useGetProfileRating, useRateProfile} from '@/features/profileRating/api/profileRatingApi'
 import {useSelector} from 'react-redux'
 import {getUserAuthData} from '@/entities/User'
-import {getProfileData} from '@/features/editableProfileCard'
 
-interface ProfileRatingProps {
+export interface ProfileRatingProps {
   profileId: string
   className?: string;
 }
 
-export const ProfileRating: FC<ProfileRatingProps> = memo((props) => {
+const ProfileRating: FC<ProfileRatingProps> = memo((props) => {
   const {t} = useTranslation()
   const {className, profileId} = props
   const userData = useSelector(getUserAuthData)
@@ -61,3 +60,5 @@ export const ProfileRating: FC<ProfileRatingProps> = memo((props) => {
       />
   );
 });
+
+export default ProfileRating
