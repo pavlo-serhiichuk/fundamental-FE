@@ -16,6 +16,7 @@ import {articleDetailsPageReducer} from '@/pages/ArticleDetailsPage/model/slices
 import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import {ArticleRecommendationsList} from '@/features/articleRecommendationsList'
 import {ArticleDetailsComments} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
+import {ArticleRating} from '@/features/articleRating'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -35,11 +36,16 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     dispatch(fetchArticleRecList())
   })
 
+  if(!id) {
+    return null
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
+        <ArticleRating articleId={id} />
         <ArticleRecommendationsList />
         <ArticleDetailsComments id={id} />
       </Page>

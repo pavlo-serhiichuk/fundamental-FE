@@ -447,22 +447,26 @@
       "title": "Notification 1. From Anna",
       "description": "Description for notification 1. The longest one",
       "userId": "1"
-    },{
+    },
+    {
       "id": "2",
       "title": "Notification 2. From Anna",
       "description": "Description for notification 2.",
       "userId": "1"
-    },{
+    },
+    {
       "id": "3",
       "title": "Notification 3. From Anna",
       "description": "Description for notification 3.",
       "userId": "1"
-    },{
+    },
+    {
       "id": "4",
       "title": "Notification 4. From Anna",
       "description": "Description for notification 4.",
       "userId": "1"
-    },{
+    },
+    {
       "id": "5",
       "title": "Notification 5. From Anna",
       "description": "Description for notification 5.",
@@ -560,20 +564,26 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"]
+      "roles": [
+        "ADMIN"
+      ]
     },
     {
       "id": "2",
       "username": "user",
       "password": "321",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "231",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
     }
   ],
@@ -598,6 +608,65 @@
       "username": "admin",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
       "currency": "USD"
+    }
+  ],
+  "articles-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Good one",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Good one",
+      "userId": "2",
+      "articleId": "2"
+    },
+    {
+      "articleId": "1",
+      "rate": 3,
+      "userId": "2",
+      "id": "Wy3vfwC"
+    },
+    {
+      "articleId": "3",
+      "rate": 2,
+      "feedback": "",
+      "userId": "2",
+      "id": "OiIiCIJ"
+    },
+    {
+      "articleId": "4",
+      "rate": 3,
+      "feedback": "",
+      "userId": "2",
+      "id": "tSm3uUS"
+    }
+  ],
+  "profiles-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "An awesome profile",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Good one",
+      "userId": "2",
+      "profileId": "2"
+    },
+    {
+      "profileId": "1",
+      "feedback": "",
+      "rate": 2,
+      "userId": "2",
+      "id": "9RaDEC2"
     }
   ]
 }

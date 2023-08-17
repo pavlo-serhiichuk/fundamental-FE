@@ -2,6 +2,7 @@ import {FC} from 'react'
 import {Page} from '@/shared/ui/Page/Page'
 import {EditableProfileCard} from '@/features/editableProfileCard'
 import {useParams} from 'react-router-dom'
+import {ProfileRating} from '@/features/profileRating/ui/ProfileRating/ProfileRating'
 
 interface ProfileProps {
   className?: string;
@@ -10,9 +11,14 @@ interface ProfileProps {
 const ProfilePage: FC<ProfileProps> = () => {
   const {id} = useParams<{ id: string }>()
 
+  if(!id) {
+    return null
+  }
+
   return (
     <Page>
       <EditableProfileCard id={id} />
+      <ProfileRating profileId={id}/>
     </Page>
 
   );

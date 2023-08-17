@@ -36,7 +36,6 @@ const DrawerContent: FC<DrawerProps> = memo((props) => {
   const closeDrawer = (velocity = 0) => {
     api.start({y: height, immediate: false, config: {...Spring.config.stiff, velocity}, onResolve: onClose})
   }
-  console.log('isOpen', isOpen)
   const bind = Gesture.useDrag(
     ({
        last,

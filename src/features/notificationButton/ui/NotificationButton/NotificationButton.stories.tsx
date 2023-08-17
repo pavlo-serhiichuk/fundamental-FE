@@ -5,7 +5,7 @@ import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDeco
 import withMock from 'storybook-addon-mock'
 
 export default {
-  title: 'shared/NotificationButton',
+  title: 'features/NotificationButton',
   component: NotificationButton,
   argTypes: {
     backgroundColor: {control: 'color'},
