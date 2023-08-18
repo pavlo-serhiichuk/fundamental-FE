@@ -2,3 +2,4 @@ export {ArticleDetailsPageAsync as ArticleDetailsPage} from './ui/ArticleDetails
 export type {ArticleDetailsCommentsSchema} from './model/types/ArticleDetailsCommentsSchema'
 export type {ArticleDetailsPageRecSchema} from './model/types/ArticleDetailsPageRecSchema'
 export type {ArticleDetailsPageSchema} from './model/types/index'
+export {fetchArticleRecList} from './model/services/fetchArticleRec/fetchArticleRec'

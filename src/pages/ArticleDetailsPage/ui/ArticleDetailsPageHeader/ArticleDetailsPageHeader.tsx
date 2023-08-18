@@ -3,11 +3,11 @@ import {classNames} from '@/shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import {memo} from 'react'
 import {useNavigate, useParams} from 'react-router-dom'
-import {RoutePath} from '@/shared/config/routeConfig/routeConfig'
 import {Button} from '@/shared/ui/Button/Button'
 import {useSelector} from 'react-redux'
 import {getCanEditArticle} from '@/pages/ArticleDetailsPage/model/selectors/article'
 import {HStack} from '@/shared/ui/Stack'
+import {RoutePath} from '@/shared/consts/router'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;

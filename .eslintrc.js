@@ -26,7 +26,7 @@ module.exports = {
         "@typescript-eslint",
         'i18next',
         "react-hooks",
-        "by-pavlo-plugin"
+        "ulbi-tv-plugin"
     ],
     "rules": {
         "@typescript-eslint/ban-ts-comment": "off",
