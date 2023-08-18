@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import '@/app/styles/index.scss'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import {Theme} from '@/app/providers/ThemeProvider'
 import {Loader} from '@/shared/ui/Loader/Loader'
 
 export default {

@@ -37,6 +37,14 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",// Checks effect dependencies
         "no-undef": 'off',
         "arrow-body-style": "off",
-        // "by-pavlo-plugin/path-checker": 'error'
+        "ulbi-tv-plugin/path-checker": ['error', {alias: '@'}],
+        // "ulbi-tv2-plugin/layer-imports": [
+        //     'error',
+        //     {
+        //         alias: '@',
+        //         ignoreImportsPatterns: ['**/StoreProvider']
+        //     }
+        // ],
+
     }
 };

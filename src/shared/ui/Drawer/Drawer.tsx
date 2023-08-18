@@ -1,7 +1,7 @@
 import {FC, memo, ReactNode, useCallback, useEffect} from 'react'
 import {classNames} from '@/shared/lib/classNames/classNames'
 import cls from './Drawer.module.scss'
-import {useTheme} from '@/app/providers/ThemeProvider'
+import useTheme from '@/shared/lib/hooks/useTheme'
 import {Portal} from '@/shared/ui/Portal/Portal'
 import {Overlay} from '@/shared/ui/Overlay/Overlay'
 import {useModal} from '@/shared/lib/hooks/useModal'
