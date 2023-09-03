@@ -1,5 +1,5 @@
 import {lazy, Suspense} from 'react'
-import {Loader} from '@/shared/ui/Loader/Loader'
+import {Loader} from '@/shared/ui/Loader'
 import {ArticleRatingProps} from '@/features/articleRating/ui/ArticleRating/ ArticleRating'
 
 const ArticleRatingLazy = lazy(() => import('./ ArticleRating'))

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import '@/app/styles/index.scss'
-import {Modal} from '@/shared/ui/Modal/Modal'
+import {Modal} from '@/shared/ui/Modal'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from '@/shared/consts/theme'
 

@@ -6,7 +6,7 @@ import {ArticleView} from '../../model/consts/consts'
 import {ArticleItem} from '../ArticleItem/ArticleItem'
 import {ArticleItemSkeleton} from '../ArticleItem/ArticleListItemSkeleton'
 import {useSelector} from 'react-redux'
-import {Text, TextSize} from '@/shared/ui/Text/Text'
+import {Text, TextSize} from '@/shared/ui/Text'
 import {useTranslation} from 'react-i18next'
 import {getArticlesPageHasMore} from '@/pages/ArticlesPage'
 

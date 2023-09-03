@@ -9,9 +9,9 @@ import cls from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetails
 import {useSelector} from 'react-redux'
 import {getArticleComments} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsCommentsSlice'
 import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
-import {Text} from '@/shared/ui/Text/Text'
+import {Text} from '@/shared/ui/Text'
 import {getArticleCommentsIsLoading} from '@/pages/ArticleDetailsPage/model/selectors/comments'
-import {Loader} from '@/shared/ui/Loader/Loader'
+import {Loader} from '@/shared/ui/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string;

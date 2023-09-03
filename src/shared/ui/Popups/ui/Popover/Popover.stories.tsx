@@ -2,7 +2,7 @@ import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Popover} from './Popover';
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import {Button} from '@/shared/ui/Button/Button'
+import {Button} from '@/shared/ui/Button'
 
 export default {
   title: 'shared/Popups/Popover',

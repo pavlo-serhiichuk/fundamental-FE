@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Dropdown} from './Dropdown';
-import {Button} from '@/shared/ui/Button/Button'
+import {Button} from '@/shared/ui/Button'
 
 export default {
   title: 'shared/Popups/Dropdown',

@@ -4,7 +4,7 @@ import cls from './Dropdown.module.scss'
 import popupsCls from '../../styles/popups.module.scss'
 import {classNames} from '@/shared/lib/classNames/classNames'
 import {DropdownDirection} from '@/shared/types/ui'
-import {AppLink} from '@/shared/ui/AppLink/AppLink'
+import {AppLink} from '@/shared/ui/AppLink'
 import {mapDirectionClass} from '../../styles/consts'
 
 interface DropdownItem {

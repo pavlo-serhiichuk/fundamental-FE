@@ -10,7 +10,7 @@ import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {
   fetchCommentsByArticleId
 } from '@/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
-import {Page} from '@/shared/ui/Page/Page'
+import {Page} from '@/shared/ui/Page'
 import {fetchArticleRecList} from '@/pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
 import {articleDetailsPageReducer} from '@/pages/ArticleDetailsPage/model/slices'
 import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'

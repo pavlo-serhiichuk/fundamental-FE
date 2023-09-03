@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import {Flex, FlexProps} from '@/shared/ui/Stack/ui/Flex/Flex'
+import {Flex, FlexProps} from '@/shared/ui/Stack'
 
 type VStackProps = Omit<FlexProps, 'direction'>
 

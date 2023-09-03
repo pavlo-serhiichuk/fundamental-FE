@@ -13,8 +13,8 @@ import {
 import {articlesPageActions} from '../../model/slices/articlesPageSlice'
 import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {useSelector} from 'react-redux'
-import {Card} from '@/shared/ui/Card/Card'
-import {Input} from '@/shared/ui/Input/Input'
+import {Card} from '@/shared/ui/Card'
+import {Input} from '@/shared/ui/Input'
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,

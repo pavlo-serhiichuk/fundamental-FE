@@ -1,5 +1,5 @@
 import {FC} from 'react'
-import {Page} from '@/shared/ui/Page/Page'
+import {Page} from '@/shared/ui/Page'
 import {EditableProfileCard} from '@/features/editableProfileCard'
 import {useParams} from 'react-router-dom'
 import {ProfileRating} from '@/features/profileRating'
