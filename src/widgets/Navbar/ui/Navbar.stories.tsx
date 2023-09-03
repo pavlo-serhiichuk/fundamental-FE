@@ -6,6 +6,7 @@ import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDeco
 import {Navbar} from './Navbar'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import withMock from 'storybook-addon-mock'
+import {Theme} from '@/shared/consts/theme'
 
 export default {
   title: 'widgets/Navbar',

@@ -5,6 +5,7 @@ import '@/app/styles/index.scss'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {MainPage} from '@/pages/MainPage'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import {Theme} from '@/shared/consts/theme'
 
 export default {
   title: 'pages/MainPage',
