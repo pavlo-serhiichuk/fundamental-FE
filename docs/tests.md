@@ -1,0 +1,1 @@
+Here is gonna be a detail info about testing

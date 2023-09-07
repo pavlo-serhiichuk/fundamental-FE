@@ -26,7 +26,8 @@ module.exports = {
         "@typescript-eslint",
         'i18next',
         "react-hooks",
-        "ulbi-tv-plugin"
+        "ulbi-tv-plugin",
+        // 'unused-imports'
     ],
     "rules": {
         "@typescript-eslint/ban-ts-comment": "off",
@@ -38,6 +39,7 @@ module.exports = {
         "no-undef": 'off',
         "arrow-body-style": "off",
         "ulbi-tv-plugin/path-checker": ['error', {alias: '@'}],
+        // "unused-imports/no-unused-imports": "error"
         // "ulbi-tv2-plugin/layer-imports": [
         //     'error',
         //     {
