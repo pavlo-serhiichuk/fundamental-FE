@@ -1,12 +1,10 @@
-import {FC, useCallback, useState} from 'react'
-import {classNames} from '@/shared/lib/classNames/classNames'
+import {FC, memo, useCallback} from 'react'
 import {useTranslation} from 'react-i18next'
-import {memo} from 'react'
 import {Dropdown} from '@/shared/ui/Popups'
 import {Avatar} from '@/shared/ui/Avatar'
 import {useDispatch, useSelector} from 'react-redux'
 import {getUserAuthData, isUserAdmin, isUserManager, userActions} from '@/entities/User'
-import {RoutePath} from '@/shared/consts/router'
+import {getRouteAdmin, getRouteProfile} from '@/shared/consts/router'
 
 interface AvatarDropdownProps {
   className?: string;
@@ -36,11 +34,11 @@ export const AvatarDropdown: FC<AvatarDropdownProps> = memo((props) => {
         items={[
           ...(isAdminPageAvailable ? [{
             content: t('Admin'),
-            href: RoutePath.admin
+            href: getRouteAdmin()
           }]: []),
           {
             content: t('Profile'),
-            href: RoutePath.profile + authData.id
+            href: getRouteProfile(authData.id)
           },
           {
             content: t('Exit'),

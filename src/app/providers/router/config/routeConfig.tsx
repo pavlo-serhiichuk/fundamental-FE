@@ -8,57 +8,68 @@ import {AdminPage} from '@/pages/AdminPage'
 import {UserRole} from '@/entities/User'
 import {ForbiddenPage} from '@/pages/ForbiddenPage'
 import {NotFoundPage} from '@/pages/NotFoundPage'
-import {AppRoutes, RoutePath} from '@/shared/consts/router'
+import {
+  AppRoutes,
+  getRouteAbout,
+  getRouteAdmin,
+  getRouteArticleCreate,
+  getRouteArticleDetails,
+  getRouteArticleEdit,
+  getRouteArticles,
+  getRouteForbidden,
+  getRouteMain,
+  getRouteProfile
+} from '@/shared/consts/router'
 import {AppRouteProps} from '@/shared/types/router'
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.MAIN]: {
-    path: RoutePath.main,
+    path: getRouteMain(),
     element: <MainPage />
   },
   [AppRoutes.ABOUT]: {
-    path: RoutePath.about,
+    path: getRouteAbout(),
     element: <AboutPage />
   },
   [AppRoutes.PROFILE]: {
-    path: `${RoutePath.profile}:id`,
+    path: getRouteProfile(':id'),
     element: <ProfilePage />,
     authOnly: true
   },
   [AppRoutes.ARTICLES]: {
-    path: RoutePath.articles,
+    path: getRouteArticles(),
     element: <ArticlesPage />,
     // authOnly: true,
   },
   [AppRoutes.ARTICLE_DETAILS]: {
-    path: `${RoutePath.articles_details}:id`,
+    path: getRouteArticleDetails(':id'),
     element: <ArticleDetailsPage />,
     authOnly: true
   },
   [AppRoutes.ARTICLE_CREATE]: {
-    path: `${RoutePath.articles_create}`,
+    path: getRouteArticleCreate(),
     element: <ArticleEditPage />,
     authOnly: true
   },
   [AppRoutes.ARTICLE_EDIT]: {
-    path: `${RoutePath.articles_edit}`,
+    path: getRouteArticleEdit(':id'),
     element: <ArticleEditPage />,
     authOnly: true
   },
   [AppRoutes.ADMIN]: {
-    path: `${RoutePath.admin}`,
+    path: getRouteAdmin(),
     element: <AdminPage />,
     authOnly: true,
     roles: [UserRole.MANAGER, UserRole.ADMIN]
   },
   [AppRoutes.FORBIDDEN]: {
-    path: `${RoutePath.forbidden}`,
+    path: getRouteForbidden(),
     element: <ForbiddenPage />,
   },
 
   //last
   [AppRoutes.NOT_FOUND]: {
-    path: RoutePath.not_found,
+    path: '*',
     element: <NotFoundPage />
   }
 }

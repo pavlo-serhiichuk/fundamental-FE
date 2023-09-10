@@ -1,5 +1,4 @@
 import {FC, memo} from 'react'
-import {classNames} from '@/shared/lib/classNames/classNames'
 import {useTranslation} from 'react-i18next'
 import cls from './CommentItem.module.scss'
 import {Comment} from '../../model/types/comment'
@@ -8,7 +7,7 @@ import {Text, TextSize} from '@/shared/ui/Text'
 import {Avatar} from '@/shared/ui/Avatar'
 import {AppLink} from '@/shared/ui/AppLink'
 import {HStack, VStack} from '@/shared/ui/Stack'
-import {RoutePath} from '@/shared/consts/router'
+import {getRouteProfile} from '@/shared/consts/router'
 
 interface CommentItemProps {
   className?: string;
@@ -43,7 +42,7 @@ export const CommentItem: FC<CommentItemProps> = memo((props) => {
 
   return (
     <VStack className={cls.CommentItem}>
-      <AppLink to={`${RoutePath.profile}${comment.user.id}`}>
+      <AppLink to={getRouteProfile(comment.user.id)}>
         <HStack gap={'8'}>
           <Avatar size={30} src={comment.user?.avatar} />
           <Text title={comment.user?.username} size={TextSize.M} />
