@@ -24,7 +24,7 @@ export const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo((props) =>
     className
   } = props
 
-  const orderOptions = useMemo<SelectOption[]>(() => [
+  const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
     {
       content: t('ascending'),
       value: 'asc'
@@ -34,7 +34,7 @@ export const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo((props) =>
     },
   ], [t])
 
-  const sortFieldOptions = useMemo<SelectOption[]>(() => [
+  const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
     {
       content: t('date'),
       value: ArticleSortField.CREATED
@@ -47,27 +47,19 @@ export const ArticleSortSelector: FC<ArticleSortSelectorProps> = memo((props) =>
     },
   ], [t])
 
-  const changeSortHandler = useCallback((newSort: string) => {
-    onChangeSort(newSort as ArticleSortField)
-  }, [onChangeSort])
-
-  const changeOrderHandler = useCallback((newOrder: string) => {
-    onChangeOrder(newOrder as SortOrder)
-  }, [onChangeOrder])
-
   return (
     <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
       <Select
         label={t('Sort BY')}
         options={sortFieldOptions}
         value={sort}
-        onChange={changeSortHandler}
+        onChange={onChangeSort}
       />
       <Select
         label={t('by')}
         options={orderOptions}
         value={order}
-        onChange={changeOrderHandler}
+        onChange={onChangeOrder}
       />
     </div>
   );
