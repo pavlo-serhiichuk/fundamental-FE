@@ -3,6 +3,7 @@ import {useTranslation} from 'react-i18next'
 import {Page} from '@/shared/ui/Page'
 import {StarRating} from '@/shared/ui/StarRating'
 import {RatingCard} from '@/entities/Rating'
+import {Counter} from '@/entities/Counter'
 
 const MainPage = () => {
   const {t} = useTranslation()
@@ -14,6 +15,7 @@ const MainPage = () => {
   return (
     <Page>
       <p><b>{t('Main page')}</b></p>
+      {/*<Counter />*/}
       <RatingCard
         title={'How do you feel about our article?'}
         feedbackTitle={'Please, leave your feedback'}
