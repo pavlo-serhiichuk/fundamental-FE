@@ -8,24 +8,16 @@ import CopyPlugin from 'copy-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 export function buildPlugins({path, isDev, apiUrl, project}: BuildOptions): webpack.WebpackPluginInstance[] {
+  const isProd = !isDev
   const plugins = [
     new HTMLWebpackPlugin({
       template: path.html
     }),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
-    }),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
       __PROJECT__: JSON.stringify(project)
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: path.locales, to: path.buildLocales },
-      ],
     }),
     new CircularDependencyPlugin({
       exclude: /node-modules/,
@@ -46,6 +38,18 @@ export function buildPlugins({path, isDev, apiUrl, project}: BuildOptions): webp
     plugins.push(new BundleAnalyzerPlugin({openAnalyzer: false}))
     plugins.push(new webpack.HotModuleReplacementPlugin())
     plugins.push(new ReactRefreshWebpackPlugin())
+  }
+
+  if(isProd) {
+    plugins.push(new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
+    }))
+    plugins.push(new CopyPlugin({
+      patterns: [
+        { from: path.locales, to: path.buildLocales },
+      ],
+    }))
   }
 
   return plugins

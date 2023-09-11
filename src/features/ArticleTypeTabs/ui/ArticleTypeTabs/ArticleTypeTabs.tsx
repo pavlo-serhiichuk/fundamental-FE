@@ -38,7 +38,6 @@ export const ArticleTypeTabs: FC<ArticleTypeTabsProps> = memo((props) => {
       }], [t]
   )
 
-
   return (
     <Tabs
       tabs={typeTabs}
