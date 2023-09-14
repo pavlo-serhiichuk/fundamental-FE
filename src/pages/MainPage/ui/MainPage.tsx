@@ -13,7 +13,7 @@ const MainPage = () => {
   }
 
   return (
-    <Page>
+    <Page data-testid="MainPage">
       <p><b>{t('Main page')}</b></p>
       {/*<Counter />*/}
       <RatingCard

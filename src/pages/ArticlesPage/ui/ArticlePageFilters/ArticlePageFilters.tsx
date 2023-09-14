@@ -21,7 +21,7 @@ import {
   getArticlesPageSort,
   getArticlesPageView
 } from '../../model/selectors/getArticlesListSelectors'
-import {SortOrder} from '@/shared/types'
+import {SortOrder} from '@/shared/types/sort'
 import {fetchArticlesList} from '../../model/services/fetchArticlesList'
 import {useDebounce} from '@/shared/lib/hooks/useDebounce'
 import {getArticlesPageType} from '../../model/selectors/getArticlesListSelectors'

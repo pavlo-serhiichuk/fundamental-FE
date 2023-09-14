@@ -10,8 +10,9 @@ import {useInitialEffect} from '@/shared/lib/hooks/useInitialEffect'
 import {getUIScrollByPath} from '@/features/UlDetector/model/selectors/UIDetectorSelectors'
 import {StateSchema} from '@/app/providers/StoreProvider'
 import {useThrottle} from '@/shared/lib/hooks/useThrottle'
+import {TestProps} from '@/app/providers/router/ui/tests'
 
-interface PageProps {
+interface PageProps extends TestProps{
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
@@ -46,6 +47,7 @@ export const Page: FC<PageProps> = memo((props) => {
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      data-testid={props['data-testid'] ?? 'Page'}
     >
       {children}
       {onScrollEnd && <div className={cls.trigger} ref={triggerRef} />}

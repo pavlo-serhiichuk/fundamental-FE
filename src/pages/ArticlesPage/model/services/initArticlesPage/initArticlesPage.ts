@@ -4,7 +4,7 @@ import {ThunkConfig} from '@/app/providers/StoreProvider'
 import {getArticlesPage_Inited} from '../../selectors/getArticlesListSelectors'
 import {fetchArticlesList} from '../../services/fetchArticlesList'
 import {articlesPageActions} from '../../slices/articlesPageSlice'
-import {SortOrder} from '@/shared/types'
+import {SortOrder} from '@/shared/types/sort'
 import {ArticleSortField, ArticleType} from '@/entities/Article'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка

@@ -16,7 +16,7 @@ const ProfilePage: FC<ProfileProps> = () => {
   }
 
   return (
-    <Page>
+    <Page data-testid="ProfilePage">
       <EditableProfileCard id={id} />
       <ProfileRating profileId={id}/>
     </Page>
