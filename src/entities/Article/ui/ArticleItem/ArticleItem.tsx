@@ -14,6 +14,8 @@ import {ArticleTextBlockComponent} from '../ArticleTextBlockComponent/ArticleTex
 import {AppLink} from '@/shared/ui/AppLink'
 import {ArticleBlockType, ArticleView} from '../../model/consts/consts'
 import {getRouteArticleDetails} from '@/shared/consts/router'
+import {AppImage} from '@/shared/ui/AppImage'
+import {Skeleton} from '@/shared/ui/Skeleton'
 
 interface ArticleItemProps {
   className?: string;
@@ -45,7 +47,12 @@ export const ArticleItem: FC<ArticleItemProps> = memo((props) => {
           </div>
           <Text title={article.title} className={cls.title} />
           {topics}
-          <img src={article.image} alt={article.image} className={cls.image} />
+          <AppImage
+            fallback={<Skeleton width={'100%'} height={250} />}
+            src={article.image}
+            alt={article.image}
+            className={cls.image}
+          />
           {textBlock && (
             <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
           )}
@@ -70,7 +77,12 @@ export const ArticleItem: FC<ArticleItemProps> = memo((props) => {
         <Card>
           <div className={cls.created}>{article.created}</div>
           <div className={cls.imageWrapper}>
-            <img className={cls.image} alt={article.title} src={article.image} />
+            <AppImage
+              fallback={<Skeleton width={200} height={200} />}
+              src={article.image}
+              alt={article.image}
+              className={cls.image}
+            />
           </div>
           <div className={cls.articleDetails}>
             {topics}
