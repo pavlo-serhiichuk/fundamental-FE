@@ -6,4 +6,4 @@ node_modules
 /extractedTranslations
 /extractedTranslations/en/translation.json
 .loki/report.html
-/reports
+/reports/unit
