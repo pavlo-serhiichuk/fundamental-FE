@@ -2,7 +2,6 @@ import React from 'react';
 import {ComponentStory, ComponentMeta} from '@storybook/react';
 import ProfileRating from './ProfileRating';
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import withMock from 'storybook-addon-mock'
 
 export default {
   title: 'features/ProfileRating',
@@ -11,7 +10,7 @@ export default {
     backgroundColor: {control: 'color'},
   },
   decorators: [
-    StoreDecorator({user: {authData: {id: '1'}}}), withMock]
+    StoreDecorator({user: {authData: {id: '1'}}})]
 } as ComponentMeta<typeof ProfileRating>;
 
 const Template: ComponentStory<typeof ProfileRating> = (args) => <ProfileRating {...args} />;

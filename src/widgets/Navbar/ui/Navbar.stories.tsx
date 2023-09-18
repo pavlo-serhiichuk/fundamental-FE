@@ -5,7 +5,6 @@ import '@/app/styles/index.scss'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Navbar} from './Navbar'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import withMock from 'storybook-addon-mock'
 import {Theme} from '@/shared/consts/theme'
 
 export default {
@@ -39,7 +38,7 @@ AuthNavbar.args = {}
 
 AuthNavbar.decorators = [StoreDecorator({
   user: {authData: {}}
-}), withMock]
+})]
 
 AuthNavbar.parameters = {
   mockData: [
