@@ -5,7 +5,7 @@ import {Profile} from '@/entities/Profile'
 
 // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const fetchProfileData = createAsyncThunk<Profile, string | undefined, ThunkConfig<string>>(
-  'login/fetchProfileData',
+  'common/fetchProfileData',
   async (profileId, thunkAPI) => {
     const {extra, rejectWithValue} = thunkAPI
 

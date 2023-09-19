@@ -27,7 +27,9 @@ export const CommentItem: FC<CommentItemProps> = memo((props) => {
   if (isLoading) {
     return (
       <VStack>
-        <HStack>
+        <HStack
+          data-testid="CommentItem.Loading"
+        >
           <Skeleton borderRadius={'50%'} height={50} width={50} />
           <Skeleton height={30} width={150} />
         </HStack>
@@ -41,7 +43,10 @@ export const CommentItem: FC<CommentItemProps> = memo((props) => {
   }
 
   return (
-    <VStack className={cls.CommentItem}>
+    <VStack
+      data-testid="CommentItem"
+      className={cls.CommentItem}
+    >
       <AppLink to={getRouteProfile(comment.user.id)}>
         <HStack gap={'8'}>
           <Avatar size={30} src={comment.user?.avatar} />

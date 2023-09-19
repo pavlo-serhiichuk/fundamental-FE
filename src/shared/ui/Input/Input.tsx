@@ -29,7 +29,7 @@ export const Input:FC<InputProps> = memo((props) => {
 
   const ref = useRef<HTMLInputElement>(null);
   const [isFocus, setIsFocus] = useState(false)
-
+  console.log('input', placeholder, value)
   useEffect(() => {
     if (autofocus) {
       setIsFocus(true)
@@ -51,7 +51,6 @@ export const Input:FC<InputProps> = memo((props) => {
         {`${label}:`}&nbsp;
       </div>}
       <input
-        {...otherProps}
         className={className}
         ref={ref}
         type={type}
@@ -59,6 +58,7 @@ export const Input:FC<InputProps> = memo((props) => {
         onChange={onChangeHandler}
         readOnly={readonly}
         placeholder={placeholder}
+        {...otherProps}
       />
     </div>
   )

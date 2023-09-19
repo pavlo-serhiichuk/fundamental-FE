@@ -10,7 +10,7 @@ interface LoginByUsernameProps {
 }
                                              // те, що отримає в результаті зіпиту | те, що відправляє | якщо помилка
 export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, ThunkConfig<string>>(
-  'login/loginByUsername',
+  'common/loginByUsername',
   async (authData, thunkAPI) => {
     const {dispatch, extra, rejectWithValue} = thunkAPI
     try {

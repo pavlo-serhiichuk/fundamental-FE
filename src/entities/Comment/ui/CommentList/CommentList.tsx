@@ -27,7 +27,10 @@ export const CommentList: FC<CommentListProps> = memo((props) => {
   }
 
   return (
-    <VStack className={classNames('', {}, [className])}>
+    <VStack
+      className={classNames('', {}, [className])}
+      data-testid="CommentList"
+    >
       {!comments.length && <Text size={TextSize.L} text={t('No comments for this article')} />}
       {comments.map(comment =>
         <CommentItem

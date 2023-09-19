@@ -439,6 +439,58 @@
           ]
         }
       ]
+    },
+    {
+      "id": "100",
+      "title": "How to become a true warrior...",
+      "subtitle": "... and make others lives harder",
+      "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
+      "views": 23,
+      "created": "26.02.2022",
+      "userId": "1",
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Ніндзя код",
+          "paragraphs": [
+            "Ніндзя-програмісти минулого використовували деякі хитрощі, щоб загострити розум тих, хто буде підтримувати їх код.\n\nГуру, що перевіряють код, шукають їх у тестових завданнях.\n\nПочатківці іноді використовують їх краще за ніндзя-програмістів.\n\nУважно перечитайте ці хитрощі і вирішіть хто ви є — ніндзя, початківець, чи може гуру перевірки коду?",
+            "Ніндзя-програмісти минулого використовували деякі хитрощі, щоб загострити розум тих, хто буде підтримувати їх код."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "title": "How to become a true warrior...",
+      "subtitle": "... and make others lives harder",
+      "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
+      "views": 23,
+      "created": "27.02.2022",
+      "userId": "1",
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
+      "blocks": []
+    },
+    {
+      "id": "102",
+      "title": "Testing article",
+      "subtitle": "... and make others lives harder",
+      "image": "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
+      "views": 23,
+      "created": "27.02.2022",
+      "userId": "1",
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
+      "blocks": []
     }
   ],
   "notifications": [
@@ -609,12 +661,23 @@
     },
     {
       "id": "2",
-      "firstname": "Gogig",
+      "firstname": "Gogi",
       "lastname": "Perhot",
       "age": 20,
       "country": "Armenia",
       "city": "Yerevan",
       "username": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
+      "currency": "USD"
+    },
+    {
+      "id": "4",
+      "firstname": "Test",
+      "lastname": "User",
+      "age": 20,
+      "country": "Armenia",
+      "city": "Yerevan",
+      "username": "test-user",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
       "currency": "USD"
     }
