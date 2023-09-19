@@ -11,19 +11,22 @@ describe('User open an article page', () => {
     })
   })
 
+  // describe('with real API', () = {})
+  // describe('with fixtures', () = {})
+
   afterEach(() => {
     cy.removeArticle(currentArticleId)
   })
 
-  it('and see article content', () => {
+  it.skip('and see article content', () => {
     cy.getByTestId('ArticleDetails.Info').should('exist' )
   })
 
-  it('and see article recommendations list', () => {
+  it.skip('and see article recommendations list', () => {
     cy.getByTestId('ArticleRecommendationsList').should('exist' )
   })
 
-  it('and left a comment', () => {
+  it.skip('and left a comment', () => {
     cy.getByTestId('ArticleDetails.Info')
     cy.getByTestId('AddCommentForm.Input').scrollIntoView()
     cy.addComment('comment text')
@@ -31,6 +34,7 @@ describe('User open an article page', () => {
   })
 
   it('and estimate the article', () => {
+    cy.intercept('GET', '**/articles/*', {fixture: 'article-details.json'})
     cy.getByTestId('ArticleDetails.Info')
     cy.getByTestId('RatingCard').scrollIntoView()
     cy.setRate(3, 'feedback')

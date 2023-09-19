@@ -1,0 +1,105 @@
+[
+  {
+    "id": "1",
+    "text": "some comment",
+    "articleId": "1",
+    "userId": "1",
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "text": "some comment",
+    "articleId": "1",
+    "userId": "2",
+    "user": {
+      "id": "2",
+      "username": "user",
+      "password": "321",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+    }
+  },
+  {
+    "articleId": "1",
+    "userId": "2",
+    "text": "321",
+    "id": "SEFrp5q",
+    "user": {
+      "id": "2",
+      "username": "user",
+      "password": "321",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+    }
+  },
+  {
+    "articleId": "1",
+    "userId": "2",
+    "text": "999",
+    "id": "kEh1Bh6",
+    "user": {
+      "id": "2",
+      "username": "user",
+      "password": "321",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+    }
+  },
+  {
+    "articleId": "1",
+    "userId": "2",
+    "text": "shh",
+    "id": "YAxttc5",
+    "user": {
+      "id": "2",
+      "username": "user",
+      "password": "321",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+    }
+  },
+  {
+    "articleId": "1",
+    "userId": "2",
+    "text": "234",
+    "id": "MCYS1Xv",
+    "user": {
+      "id": "2",
+      "username": "user",
+      "password": "321",
+      "roles": [
+        "USER"
+      ],
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU"
+    }
+  },
+  {
+    "articleId": "1",
+    "userId": "1",
+    "text": "wewewe",
+    "id": "tfW62YT",
+    "user": {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ]
+    }
+  }
+]

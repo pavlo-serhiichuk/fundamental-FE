@@ -1,7 +1,7 @@
 import {Article} from '../../../src/entities/Article'
 
 const defaultArticle = {
-    id: "103",
+    id: "104",
     title: "Testing article",
     subtitle: "... and make others lives harder",
     image: "https://t4.ftcdn.net/jpg/05/72/75/99/360_F_572759975_8Tku6l3E3PAytqoLLRij9xwt1vybvbbi.jpg",
