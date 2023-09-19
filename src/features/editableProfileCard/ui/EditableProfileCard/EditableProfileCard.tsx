@@ -57,7 +57,6 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
 
   const onChangeFirstname = useCallback((value?: string) => {
-    console.log('onChangeFirstname')
     dispatch(profileActions.updateProfile({firstname: value || ''}))
   }, [dispatch])
 
@@ -88,7 +87,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   const onChangeCountry = useCallback((country?: Country) => {
     dispatch(profileActions.updateProfile({country}))
   }, [dispatch])
-  console.log(1, formData)
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <VStack gap={'8'} max>

@@ -18,12 +18,12 @@ interface ProfilePageHeaderProps {
 
 
 export const EditableProfileCardHeader: FC<ProfilePageHeaderProps> = (props) => {
+  const {className} = props
+
   const {t} = useTranslation()
   const authData = useSelector(getUserAuthData)
   const profileData = useSelector(getProfileData)
-  const {
-    className
-  } = props
+
 
   const readonly = useSelector(getProfileReadonly)
   const dispatch = useAppDispatch()

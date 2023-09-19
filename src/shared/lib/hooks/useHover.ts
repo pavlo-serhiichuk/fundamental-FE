@@ -16,7 +16,6 @@ export const useHover = (): UseHoverResult => {
 
   const onMouseLeave = useCallback(() => {
     setIsHover(false)
-    console.log('onMouseLeave')
   }, [])
 
   return useMemo(

@@ -22,7 +22,6 @@ const ProfileRating: FC<ProfileRatingProps> = memo((props) => {
 
   const handleRateProfile = useCallback((starsCount: number, feedback?: string) => {
     try {
-      console.log('here 1')
       rateProfileMutation({
         profileId,
         feedback,
