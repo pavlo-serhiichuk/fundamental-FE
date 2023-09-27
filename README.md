@@ -143,3 +143,25 @@ For async reducers connecting(avoid them in common bundle) uses [DynamicModuleLo
 - [profileRating](/src/features/profileRating)
 - [ThemeSwitcher](/src/features/ThemeSwitcher)
 - [UIDetector](/src/features/UIDetector)
+
+----
+## Feature flags
+
+Feature flags available only with helpers "toggleFeatures"
+
+"toggleFeatures" takes as a param an object with next fields:
+{
+ name: feature flag name,
+ on: a function, that works after the feature turn ON 
+ off: a function, that works after the feature turn OFF 
+}
+
+### For automatic feature removing you should use remove-feature.js script.
+
+To run: npx ts-node ./scripts/remove-feature.ts <REQUIRED_FEATURE_NAME REQUIRED_FEATURE_STATE>
+
+Required params:
+1. REQUIRED_FEATURE_NAME - the feature name
+2. REQUIRED_FEATURE_STATE - the feature state (on/off)
+
+----

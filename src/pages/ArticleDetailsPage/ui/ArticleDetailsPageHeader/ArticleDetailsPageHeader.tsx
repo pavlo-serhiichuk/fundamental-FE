@@ -27,6 +27,7 @@ export const ArticleDetailsPageHeader: FC<ArticleDetailsPageHeaderProps> = memo(
     navigate(getRouteArticleDetails(id as string))
   }, [])
 
+
   return (
     <HStack justify={'between'} className={classNames('', {}, [className])}>
       <Button onClick={onBackToArticles}>
