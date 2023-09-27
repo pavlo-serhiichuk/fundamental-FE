@@ -1,5 +1,6 @@
 import {StateSchema} from '@/app/providers/StoreProvider'
 import {ArticleSortField, ArticleView, ArticleType} from '@/entities/Article/model/consts/consts'
+import {buildSelector} from '@/shared/lib/store'
 
 export const getArticlesListIsLoading = (state: StateSchema) => state.articlesPage?.isLoading || false
 export const getArticlesListError = (state: StateSchema) => state.articlesPage?.error
@@ -12,3 +13,7 @@ export const getArticlesPageOrder = (state: StateSchema) => state.articlesPage?.
 export const getArticlesPageSearch = (state: StateSchema) => state.articlesPage?.search ?? ''
 export const getArticlesPageType = (state: StateSchema) => state.articlesPage?.type ?? ArticleType.ALL
 export const getArticlesPage_Inited = (state: StateSchema) => state.articlesPage?._inited
+
+export const [getArticleItemById] = buildSelector(
+  (state, id: string) => state.articlesPage?.entities[id]
+)

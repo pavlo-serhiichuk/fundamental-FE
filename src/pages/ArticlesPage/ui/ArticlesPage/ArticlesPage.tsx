@@ -12,6 +12,7 @@ import {fetchNextArticlesList} from '../../model/services/fetchNextArticlesList/
 import {initArticlesPage} from '../../model/services/initArticlesPage/initArticlesPage'
 import {ArticlePageFilters} from '../ArticlePageFilters/ArticlePageFilters'
 import {ArticleInfiniteList} from '../ArticleInfiniteList/ArticleInfiniteList'
+import {getArticleItemById} from '@/pages/ArticlesPage/model/selectors/getArticlesListSelectors'
 
 interface ArticlesPageProps {
   className?: string;
@@ -26,7 +27,8 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const {className} = props
   const dispatch = useAppDispatch()
   const [searchParams] = useSearchParams()
-
+  const data = getArticleItemById('2')
+  console.log('d', data)
   useInitialEffect(() => {
     dispatch(initArticlesPage(searchParams))
   })

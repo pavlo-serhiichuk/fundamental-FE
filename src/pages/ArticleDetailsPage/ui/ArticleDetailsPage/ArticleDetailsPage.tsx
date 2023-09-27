@@ -17,6 +17,8 @@ import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDet
 import {ArticleRecommendationsList} from '@/features/articleRecommendationsList'
 import {ArticleDetailsComments} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
 import {ArticleRating} from '@/features/articleRating'
+import {getFeatureFlag} from '@/shared/lib/features'
+import {Counter} from '@/entities/Counter'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -31,7 +33,8 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const {className} = props
   const {id} = useParams<{id: string}>()
   const dispatch = useAppDispatch()
-
+  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
+  const isCounterEnabled = getFeatureFlag('isCounterEnabled')
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecList())
@@ -46,7 +49,8 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
-        <ArticleRating articleId={id} />
+        {isCounterEnabled && <Counter />}
+        {isArticleRatingEnabled && <ArticleRating articleId={id} />}
         <ArticleRecommendationsList />
         <ArticleDetailsComments id={id} />
       </Page>
