@@ -3,3 +3,5 @@ export {getUserAuthData} from './model/selectors/getUserAuthData/getUserAuthData
 export type {User, UserSchema} from './model/types/userSchema'
 export {isUserAdmin, isUserManager, getUserRoles} from './model/selectors/roleSelectors'
 export {UserRole} from './model/consts/consts'
+export {useJsonSettings, getJsonSettings} from './model/selectors/jsonSettings'
+export {saveJsonSettings} from './model/service/saveJsonSettings'

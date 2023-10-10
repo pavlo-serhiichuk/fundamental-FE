@@ -20,7 +20,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
         throw new Error()
       }
 
-      localStorage.setItem(USER_LOCALSTORAGE, JSON.stringify(response.data))
       dispatch(userActions.setAuthData(response.data))
       // @ts-ignore
       extra.navigate('/about')
