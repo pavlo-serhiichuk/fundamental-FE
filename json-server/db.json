@@ -640,7 +640,8 @@
       "jsonSettings": {
         "theme": "app_blue_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpened": false
+        "settingsPageHasBeenOpened": false,
+        "isArticlesPageWasOpened": true
       }
     },
     {
@@ -658,7 +659,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpened": false
+        "settingsPageHasBeenOpened": false,
+        "isArticlesPageWasOpened": true
       }
     },
     {

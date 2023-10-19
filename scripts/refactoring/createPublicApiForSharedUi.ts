@@ -16,7 +16,7 @@ function isAbsolute(value: string) {
 }
 
 componentsDirs?.forEach((directory) => {
-  const indexFilePath = directory.getPath() + '/sort.ts'
+  const indexFilePath = directory.getPath() + '/index.ts'
   const indexFile = directory.getSourceFile(indexFilePath)
   if(!indexFile) {
     const sourceCode = `export * from './${directory.getBaseName()}'`

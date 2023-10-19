@@ -13,6 +13,7 @@ import {initArticlesPage} from '../../model/services/initArticlesPage/initArticl
 import {ArticlePageFilters} from '../ArticlePageFilters/ArticlePageFilters'
 import {ArticleInfiniteList} from '../ArticleInfiniteList/ArticleInfiniteList'
 import {getArticleItemById} from '@/pages/ArticlesPage/model/selectors/getArticlesListSelectors'
+import {ArticlesPageGreeting} from '@/features/articlesPageGreeting'
 
 interface ArticlesPageProps {
   className?: string;
@@ -47,6 +48,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
         className={classNames(cls.ArticlesPage, {}, [className])}>
         <ArticlePageFilters />
         <ArticleInfiniteList />
+        <ArticlesPageGreeting />
       </Page>
     </DynamicModuleLoader>
   );
