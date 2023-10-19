@@ -4,6 +4,7 @@ import {USER_LOCALSTORAGE} from '@/shared/consts/localStorage'
 import {setFeatureFlags} from '@/shared/lib/features'
 import {saveJsonSettings} from '@/entities/User/model/service/saveJsonSettings'
 import {JsonSettings} from '@/entities/User/model/types/jsonSettings'
+import {initAuthData} from '../service/initAuthData'
 
 const initialState: UserSchema = {
   _init: false
@@ -18,15 +19,6 @@ export const userSlice = createSlice({
         setFeatureFlags(action.payload.features)
       localStorage.setItem(USER_LOCALSTORAGE, action.payload.id)
     },
-    initAuthData: (state) => {
-        // @ts-ignore
-      const user = JSON.parse(localStorage.getItem(USER_LOCALSTORAGE))
-      if (user) {
-        state.authData = user
-        setFeatureFlags(user.features)
-      }
-      state._init = true
-    },
     logout: (state) => {
       state.authData = undefined
       localStorage.removeItem(USER_LOCALSTORAGE)
@@ -38,6 +30,16 @@ export const userSlice = createSlice({
             if(state.authData) {
               state.authData.jsonSettings = action.payload
             }
+          });
+      builder
+          .addCase(initAuthData.fulfilled, (state, {payload}: PayloadAction<User>) => {
+            state.authData = payload
+            setFeatureFlags(payload.features)
+            state._init = true
+          });
+      builder
+          .addCase(initAuthData.rejected, (state) => {
+            state._init = true
           });
   },
 })

@@ -12,7 +12,6 @@ const useTheme = (): UseThemeResult => {
   const {theme, setTheme} = useContext(ThemeContext)
 
   const toggleTheme = (saveAction: (theme: Theme) => void) => {
-    console.log('theme name', theme)
     let newTheme: Theme;
 
     switch(theme) {
@@ -28,7 +27,7 @@ const useTheme = (): UseThemeResult => {
       default:
         newTheme = Theme.LIGHT
     }
-    console.log(1, newTheme)
+
     setTheme?.(newTheme)
     document.body.className = newTheme
     saveAction?.(newTheme)

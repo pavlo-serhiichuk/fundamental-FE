@@ -5,3 +5,4 @@ export {isUserAdmin, isUserManager, getUserRoles} from './model/selectors/roleSe
 export {UserRole} from './model/consts/consts'
 export {useJsonSettings, getJsonSettings} from './model/selectors/jsonSettings'
 export {saveJsonSettings} from './model/service/saveJsonSettings'
+export {initAuthData} from './model/service/initAuthData'
