@@ -1,6 +1,5 @@
-import {ChangeEvent, FC, memo, useMemo} from 'react'
+import {ChangeEvent, useMemo} from 'react'
 import {classNames} from '@/shared/lib/classNames/classNames'
-import {useTranslation} from 'react-i18next'
 import cls from './Select.module.scss'
 
 export interface SelectOption<T extends string> {
@@ -18,7 +17,6 @@ interface SelectProps<T extends string> {
 }
 
 export const Select = <T extends string>(props: SelectProps<T>) => {
-  const {t} = useTranslation()
   const {
     className,
     label,

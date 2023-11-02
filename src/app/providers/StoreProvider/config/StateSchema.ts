@@ -4,7 +4,11 @@ import {LoginSchema} from '@/features/AuthByUsername'
 import {AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject} from '@reduxjs/toolkit'
 import {AxiosInstance} from 'axios'
 import {ArticleDetailsSchema} from '@/entities/Article'
-import {ArticleDetailsPageSchema} from '@/pages/ArticleDetailsPage'
+import {
+  ArticleDetailsCommentsSchema,
+  ArticleDetailsPageRecSchema,
+  ArticleDetailsPageSchema
+} from '@/pages/ArticleDetailsPage'
 import {AddCommentFormSchema} from '@/features/addCommentForm'
 import {ArticlesPageSchema} from '@/pages/ArticlesPage'
 import {UIDetectorSchema} from '@/features/UlDetector'
@@ -22,7 +26,9 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlesPageSchema
-  articleDetailsPage?: ArticleDetailsPageSchema
+  articleDetailsPageRec?: ArticleDetailsPageRecSchema
+  articleDetailsPageComments?: ArticleDetailsCommentsSchema
+
 }
 
 export type StateSchemaKey = keyof StateSchema

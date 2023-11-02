@@ -83,6 +83,7 @@ export default {
   component: ArticleDetails,
   argTypes: {
     backgroundColor: {control: 'color'},
+    decorators: [StoreDecorator({})]
   },
 } as ComponentMeta<typeof ArticleDetails>;
 
@@ -99,6 +100,7 @@ Primary.decorators = [StoreDecorator({
     data: article
   }
 })];
+
 export const Loading = Template.bind({});
 
 Loading.args = {};
@@ -107,6 +109,7 @@ Loading.decorators = [StoreDecorator({
     isLoading: true
   }
 })];
+
 export const Error = Template.bind({});
 
 Error.args = {};

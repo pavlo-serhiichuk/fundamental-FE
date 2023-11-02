@@ -11,13 +11,14 @@ import {
 } from '@/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import {Page} from '@/shared/ui/Page'
 import {fetchArticleRecList} from '@/pages/ArticleDetailsPage/model/services/fetchArticleRec/fetchArticleRec'
-import {articleDetailsPageReducer} from '@/pages/ArticleDetailsPage/model/slices'
 import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import {ArticleRecommendationsList} from '@/features/articleRecommendationsList'
 import {ArticleDetailsComments} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
 import {ArticleRating} from '@/features/articleRating'
 import {getFeatureFlag, toggleFeatures} from '@/shared/lib/features'
 import {Card} from '@/shared/ui/Card'
+import {articleDetailsPageRecReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsPageRecSlice'
+import {articleDetailsCommentsReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsCommentsSlice'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -25,15 +26,14 @@ interface ArticleDetailsPageProps {
 
 const reducers: ReducersList = {
 // @ts-ignore
-  articleDetailsPage: articleDetailsPageReducer
+  articleDetailsPageRec: articleDetailsPageRecReducer,
+  articleDetailsPageComments: articleDetailsCommentsReducer
 }
 
 const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const {className} = props
   const {id} = useParams<{id: string}>()
   const dispatch = useAppDispatch()
-  const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled')
-  const isCounterEnabled = getFeatureFlag('isCounterEnabled')
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecList())

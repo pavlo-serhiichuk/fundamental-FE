@@ -33,4 +33,4 @@ const articleDetailsPageRecSlice = createSlice({
   }
 })
 
-export const {reducer: articleDetailsPageRecReducer} = articleDetailsPageRecSlice
+export const articleDetailsPageRecReducer = articleDetailsPageRecSlice.reducer
