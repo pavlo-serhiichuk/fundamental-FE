@@ -6,6 +6,7 @@ import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDeco
 import {Navbar} from './Navbar'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import {Theme} from '@/shared/consts/theme'
+import withMock from 'storybook-addon-mock'
 
 export default {
   title: 'widgets/Navbar',
@@ -13,6 +14,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [withMock, StoreDecorator({})]
 } as ComponentMeta<typeof Navbar>;
 
 const mockNotification = {

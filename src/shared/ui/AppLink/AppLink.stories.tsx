@@ -3,6 +3,7 @@ import {ComponentStory, ComponentMeta, addDecorator} from '@storybook/react';
 import {AppLink, AppLinkTheme} from '@/shared/ui/AppLink'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from '@/shared/consts/theme'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'shared/AppLink',
@@ -12,7 +13,8 @@ export default {
   },
   args: {
     to: '/'
-  }
+  },
+  decorators: [StoreDecorator({})]
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;

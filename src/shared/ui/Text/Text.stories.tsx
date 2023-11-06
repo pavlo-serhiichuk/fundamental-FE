@@ -4,6 +4,7 @@ import '@/app/styles/index.scss'
 import {Text, TextSize, TextTheme} from './Text'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from '@/shared/consts/theme'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'shared/Text',
@@ -11,6 +12,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [StoreDecorator({})]
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;

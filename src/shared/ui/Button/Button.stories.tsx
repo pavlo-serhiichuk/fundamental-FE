@@ -5,6 +5,8 @@ import {Button, ButtonSize, ButtonTheme} from './Button';
 import '@/app/styles/index.scss'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {Theme} from '@/shared/consts/theme'
+import withMock from 'storybook-addon-mock'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'shared/Button',
@@ -12,6 +14,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [withMock, StoreDecorator({})]
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;

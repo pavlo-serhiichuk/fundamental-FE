@@ -2,6 +2,7 @@ import {ComponentMeta, ComponentStory} from '@storybook/react'
 import React from 'react'
 import {NotificationList} from './NotificationList'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import withMock from 'storybook-addon-mock'
 
 export default {
   title: 'entities/Notification/NotificationList',
@@ -9,7 +10,7 @@ export default {
   argTypes: {
     backgroundColor: {control: 'color'},
   },
-  decorators: [StoreDecorator({})]
+  decorators: [withMock, StoreDecorator({})]
 } as ComponentMeta<typeof NotificationList>;
 
 const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
@@ -24,7 +25,7 @@ Primary.parameters = {
       url: __API__ + '/notifications',
       method: '',
       status: 200,
-      response : [
+      response: [
         {id: '1', title: 'title 1', description: 'description 1', userId: '2'},
         {id: '1', title: 'title 2', description: 'description 2', userId: '2'},
         {id: '1', title: 'title 3', description: 'description 3', userId: '2'},

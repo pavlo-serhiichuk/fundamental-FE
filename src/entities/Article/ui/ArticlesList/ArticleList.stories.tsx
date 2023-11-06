@@ -3,7 +3,6 @@ import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {ArticleList} from './ArticleList';
 import {Article} from '../../model/types/article'
 import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import {Primary} from '@/pages/ArticlesPage/ui/ArticlesPage/ArticlesPage.stories'
 import {ArticleView} from '@/entities/Article/model/consts/consts'
 
 const article: Article = {
@@ -114,7 +113,7 @@ export const isLoadingBig = Template.bind({});
 
 isLoadingBig.args = {
   isLoading: true,
-  articles: [],
+  articles: new Array(16).fill(0).map((_, i) => ({...article, id: String(i)})),
   view: ArticleView.BIG
 };
 
@@ -124,7 +123,7 @@ export const isLoadingSmall = Template.bind({});
 
 isLoadingSmall.args = {
   isLoading: true,
-  articles: [],
+  articles: new Array(16).fill(0).map((_, i) => ({...article, id: String(i)})),
   view: ArticleView.SMALL
 };
 isLoadingSmall.decorators = [StoreDecorator({})];

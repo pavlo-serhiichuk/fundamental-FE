@@ -12,7 +12,6 @@ interface AvatarDropdownProps {
 
 export const AvatarDropdown: FC<AvatarDropdownProps> = memo((props) => {
   const {t} = useTranslation()
-  const {className} = props
   const authData = useSelector(getUserAuthData)
   const isAdmin = useSelector(isUserAdmin)
   const isManager = useSelector(isUserManager)

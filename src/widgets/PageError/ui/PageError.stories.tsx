@@ -5,6 +5,7 @@ import '@/app/styles/index.scss'
 import {ThemeDecorator} from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import {PageError} from '@/widgets/PageError'
 import {Theme} from '@/shared/consts/theme'
+import {StoreDecorator} from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
   title: 'widgets/PageError',
@@ -12,6 +13,7 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [StoreDecorator({})]
 } as ComponentMeta<typeof PageError>;
 
 const Template: ComponentStory<typeof PageError> = (args) => <PageError {...args} />;
