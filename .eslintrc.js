@@ -38,6 +38,7 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",// Checks effect dependencies
         "no-undef": 'off',
         "arrow-body-style": "off",
+        "@typescript-eslint/no-namespace": "off",
         "ulbi-tv-plugin/path-checker": ['error', {alias: '@'}],
         // "unused-imports/no-unused-imports": "error"
         // "ulbi-tv2-plugin/layer-imports": [

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {Article} from '../../../src/entities/Article'
 
 const defaultArticle = {

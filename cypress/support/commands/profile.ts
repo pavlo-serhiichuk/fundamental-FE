@@ -1,6 +1,5 @@
-import {USER_LOCALSTORAGE} from '../../../src/shared/consts/localStorage'
+// @ts-nocheck
 import {User} from '../../../src/entities/User'
-import { selectByTestId } from '../../helpers/selectByTestId'
 
 export const updateProfile = (firstname: string, lastname: string) => {
   cy.getByTestId('EditableProfileCardHeader.EditButton').click()

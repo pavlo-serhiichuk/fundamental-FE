@@ -1,7 +1,9 @@
+// @ts-nocheck
 import {USER_LOCALSTORAGE} from '../../../src/shared/consts/localStorage'
 import {User} from '../../../src/entities/User'
 import { selectByTestId } from '../../helpers/selectByTestId'
 
+// eslint-disable-next-line @typescript-eslint/no-inferrable-types
 export const login = (username: string = 'test-user', password: string = '111') => {
   return cy.request({
     method: 'POST',
