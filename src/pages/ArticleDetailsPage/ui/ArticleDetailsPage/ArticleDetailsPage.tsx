@@ -15,7 +15,7 @@ import {ArticleDetailsPageHeader} from '@/pages/ArticleDetailsPage/ui/ArticleDet
 import {ArticleRecommendationsList} from '@/features/articleRecommendationsList'
 import {ArticleDetailsComments} from '@/pages/ArticleDetailsPage/ui/ArticleDetailsComments/ArticleDetailsComments'
 import {ArticleRating} from '@/features/articleRating'
-import {getFeatureFlag, toggleFeatures} from '@/shared/lib/features'
+import {ToggleFeature, toggleFeatures} from '@/shared/lib/features'
 import {Card} from '@/shared/ui/Card'
 import {articleDetailsPageRecReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsPageRecSlice'
 import {articleDetailsCommentsReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsCommentsSlice'
@@ -43,18 +43,12 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
     return null
   }
 
-  const rating = toggleFeatures({
-    name: 'isArticleRatingEnabled',
-    on: () => <ArticleRating articleId={id} />,
-    off: () => <Card>There is gonna be card rating</Card>
-  })
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
-        {rating}
+        <ToggleFeature on={<ArticleRating articleId={id} />} off={<Card>There is gonna be card rating</Card>} feature={'isArticleRatingEnabled'} />
         <ArticleRecommendationsList />
         <ArticleDetailsComments id={id} />
       </Page>

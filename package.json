@@ -26,7 +26,8 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
     "generate:slice": "node ./scripts/createSlice/index.js",
-    "postinstall": "rm -rf ./node_modules/.cache"
+    "postinstall": "rm -rf ./node_modules/.cache",
+    "remove-feature": "ts-node ./scripts/remove-feature.ts"
   },
   "keywords": [],
   "author": "",
@@ -113,7 +114,7 @@
     "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0",
     "ts-loader": "^9.2.6",
-    "ts-morph": "^19.0.0",
+    "ts-morph": "^16.0.0",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",
     "vite": "^4.4.7",
