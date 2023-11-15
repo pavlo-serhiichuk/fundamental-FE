@@ -644,10 +644,11 @@
         "isCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpened": false,
-        "isArticlesPageWasOpened": true
+        "isArticlesPageWasOpened": true,
+        "isV2": true
       }
     },
     {
@@ -715,7 +716,7 @@
       "age": 20,
       "country": "Armenia",
       "city": "Yerevan",
-      "username": "admin",
+      "username": "user",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0QAlaEH4XTEh16bFUKKiKxjO_bzbLAS9bQ&usqp=CAU",
       "currency": "USD"
     },

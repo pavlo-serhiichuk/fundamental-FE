@@ -10,8 +10,8 @@ interface ToggleFeaturesOptions<T> {
 export function toggleFeatures<T>({off, on, name}: ToggleFeaturesOptions<T>): T {
 
   if (getFeatureFlag(name)) {
-    return on()
+    return off()
   }
+    return on()
 
-  return off()
 }

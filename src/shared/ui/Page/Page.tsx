@@ -11,6 +11,7 @@ import {getUIScrollByPath} from '@/features/UlDetector/model/selectors/UIDetecto
 import {StateSchema} from '@/app/providers/StoreProvider'
 import {useThrottle} from '@/shared/lib/hooks/useThrottle'
 import {TestProps} from '@/app/providers/router/ui/tests'
+import {toggleFeatures} from '@/shared/lib/features'
 
 interface PageProps extends TestProps{
   className?: string;
@@ -42,10 +43,16 @@ export const Page: FC<PageProps> = memo((props) => {
     }))
   }, 1500)
 
+  const actualPageClass = toggleFeatures({
+    name: 'isV2',
+    on: () => cls.PageV2,
+    off: () => cls.Page
+  })
+  console.log(actualPageClass)
   return (
     <main
       ref={wrapperRef}
-      className={classNames(cls.Page, {}, [className])}
+      className={classNames(actualPageClass, {}, [className])}
       onScroll={onScroll}
       data-testid={props['data-testid'] ?? 'Page'}
     >

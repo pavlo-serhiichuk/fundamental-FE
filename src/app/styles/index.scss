@@ -14,6 +14,13 @@ body {
   min-height: 100vh;
 }
 
+.app_v2 {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  font: var(--font-m-v2);
+  color: var(--text-v2);
+}
+
 .content-page {
   display: grid;
   grid-template-columns: 300px 1fr;

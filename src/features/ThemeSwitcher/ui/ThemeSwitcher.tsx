@@ -5,10 +5,11 @@ import DarkIcon from '@/shared/assets/icons/theme-dark.svg'
 import BlueIcon from '@/shared/assets/icons/theme-blue.svg'
 import {Button, ButtonTheme} from '@/shared/ui/Button'
 import cls from './ThemeSwitcher.module.scss'
-import {Theme} from '@/shared/consts/theme'
 import useTheme from '@/shared/lib/hooks/useTheme'
 import {useAppDispatch} from '@/shared/lib/hooks/useAppDispatch'
 import {saveJsonSettings} from '@/entities/User'
+import {Theme} from '@/shared/consts/theme'
+import {Icon} from '@/shared/ui/Icon'
 
 interface ThemeSwitcherProps {
   className?: string;
@@ -34,9 +35,14 @@ export const ThemeSwitcher:FC<ThemeSwitcherProps> = memo((props) => {
       onClick={onToggle}
       className={classNames(cls.ThemeSwitcher, {}, [className])}
     >
-      {theme === Theme.LIGHT
-        ? <DarkIcon />
-        : theme === Theme.DARK ? <BlueIcon height={50} /> : <LightIcon height={50} />}
+      <Icon
+        Svg={theme === Theme.LIGHT ? DarkIcon : theme === Theme.DARK ? BlueIcon : LightIcon}
+        height={50}
+        width={50}
+      />
+      {/*{theme === Theme.LIGHT*/}
+      {/*  ? <DarkIcon />*/}
+      {/*  : theme === Theme.DARK ? <BlueIcon height={50} /> : <LightIcon height={50} />}*/}
     </Button>
   );
 });

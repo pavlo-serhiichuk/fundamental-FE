@@ -19,6 +19,8 @@ import {ToggleFeature, toggleFeatures} from '@/shared/lib/features'
 import {Card} from '@/shared/ui/Card'
 import {articleDetailsPageRecReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsPageRecSlice'
 import {articleDetailsCommentsReducer} from '@/pages/ArticleDetailsPage/model/slices/ArticleDetailsCommentsSlice'
+import {useSelector} from 'react-redux'
+import {getUserAuthData, useJsonSettings} from '@/entities/User'
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -34,6 +36,8 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const {className} = props
   const {id} = useParams<{id: string}>()
   const dispatch = useAppDispatch()
+  const isV2 = useJsonSettings()?.isV2
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
     dispatch(fetchArticleRecList())
@@ -48,7 +52,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
-        <ToggleFeature on={<ArticleRating articleId={id} />} off={<Card>There is gonna be card rating</Card>} feature={'isArticleRatingEnabled'} />
+        <ToggleFeature isOn={isV2} on={<ArticleRating articleId={id} />} off={<Card>There is gonna be card rating</Card>} feature={'isArticleRatingEnabled'} />
         <ArticleRecommendationsList />
         <ArticleDetailsComments id={id} />
       </Page>

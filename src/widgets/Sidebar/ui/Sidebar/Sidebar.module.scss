@@ -4,15 +4,14 @@
   background-color: var(--inverted-secondary-bg-color);
   position: relative;
   transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .switcher {
-  position: absolute;
-  bottom: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
 }
 
 .collapsed {
@@ -35,4 +34,14 @@
 
 .items {
   margin: 10px 0 0 26px;
+}
+
+.SidebarV2 {
+  background-color: var(--light-bg-v2);
+  width: 220px;
+  height: 100%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
